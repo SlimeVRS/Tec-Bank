@@ -21,15 +21,15 @@
         android:layout_height="50dp"
         android:text="@string/cuenta"
         app:layout_constraintBottom_toTopOf="@+id/exit_btn"
-        app:layout_constraintEnd_toStartOf="@+id/loan_btn"
+        app:layout_constraintEnd_toStartOf="@+id/card_btn"
         app:layout_constraintHorizontal_bias="0.261"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/loan_btn"
+        android:id="@+id/card_btn"
         android:layout_width="150dp"
         android:layout_height="50dp"
-        android:text="@string/prestamos"
+        android:text="@string/tarjetas"
         app:layout_constraintBottom_toTopOf="@+id/exit_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.911"

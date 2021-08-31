@@ -7,22 +7,22 @@
 
     <fragment
         android:id="@+id/LogingFragment"
-        android:name="com.example.sisepuede.FirstFragment"
+        android:name="com.example.sisepuede.LogginFragment"
         android:label="@string/login"
         tools:layout="@layout/fragment_loggin">
 
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            android:id="@+id/action_FirstFragment_to_AccFragment"
             app:destination="@id/AccFragment" />
     </fragment>
     <fragment
         android:id="@+id/AccFragment"
-        android:name="com.example.sisepuede.SecondFragment"
+        android:name="com.example.sisepuede.AccountFragment"
         android:label="@string/cuenta"
         tools:layout="@layout/fragment_acc">
 
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            android:id="@+id/action_SecondFragment_to_logginFragment"
             app:destination="@id/LogingFragment" />
     </fragment>
 
@@ -33,7 +33,7 @@
         tools:layout="@layout/fragment_card">
         >
         <action
-            android:id="@+id/action_cardFragment_to_FirstFragment"
+            android:id="@+id/action_cardFragment_to_logginFragment"
             app:destination="@id/LogingFragment" />
         <action
             android:id="@+id/action_cardFragment_to_accFragment"
@@ -50,7 +50,7 @@
         tools:layout="@layout/fragment_loan">
         >
         <action
-            android:id="@+id/action_LoanFragment_to_FirstFragment"
+            android:id="@+id/action_LoanFragment_to_logginFragment"
             app:destination="@id/LogingFragment" />
         <action
             android:id="@+id/action_LoanFragment_to_accFragment"
