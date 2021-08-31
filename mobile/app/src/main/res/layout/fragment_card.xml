@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SecondFragment">
+    tools:context=".CardFragment">
 
     <Button
         android:id="@+id/exit_btn"
@@ -13,27 +13,27 @@
         android:text="@string/salir"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.347"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.992" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/acc_btn"
         android:layout_width="150dp"
         android:layout_height="50dp"
-        android:text="@string/tarjetas"
+        android:text="@string/cuenta"
         app:layout_constraintBottom_toTopOf="@+id/exit_btn"
         app:layout_constraintEnd_toStartOf="@+id/loan_btn"
-        app:layout_constraintHorizontal_bias="0.213"
+        app:layout_constraintHorizontal_bias="0.261"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/loan_btn"
         android:layout_width="150dp"
         android:layout_height="50dp"
-        android:layout_marginEnd="28dp"
         android:text="@string/prestamos"
         app:layout_constraintBottom_toTopOf="@+id/exit_btn"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.911"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+
