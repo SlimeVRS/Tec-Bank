@@ -3,34 +3,61 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/LogingFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
+        android:id="@+id/LogingFragment"
         android:name="com.example.sisepuede.FirstFragment"
         android:label="@string/login"
-        tools:layout="@layout/fragment_first">
+        tools:layout="@layout/fragment_loggin">
 
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            app:destination="@id/AccFragment" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
+        android:id="@+id/AccFragment"
         android:name="com.example.sisepuede.SecondFragment"
         android:label="@string/cuenta"
-        tools:layout="@layout/fragment_second">
+        tools:layout="@layout/fragment_acc">
 
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            app:destination="@id/LogingFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/CardFragment"
         android:name="com.example.sisepuede.CardFragment"
-        android:label="@string/cuenta"
+        android:label="@string/tarjetas"
         tools:layout="@layout/fragment_card">
         >
-
+        <action
+            android:id="@+id/action_cardFragment_to_FirstFragment"
+            app:destination="@id/LogingFragment" />
+        <action
+            android:id="@+id/action_cardFragment_to_accFragment"
+            app:destination="@id/AccFragment" />
+        <action
+            android:id="@+id/action_cardFragment_to_loanFragment"
+            app:destination="@id/LoanFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/LoanFragment"
+        android:name="com.example.sisepuede.CardFragment"
+        android:label="@string/prestamos"
+        tools:layout="@layout/fragment_loan">
+        >
+        <action
+            android:id="@+id/action_LoanFragment_to_FirstFragment"
+            app:destination="@id/LogingFragment" />
+        <action
+            android:id="@+id/action_LoanFragment_to_accFragment"
+            app:destination="@id/AccFragment" />
+        <action
+            android:id="@+id/action_LoanFragment_to_cardFragment"
+            app:destination="@id/CardFragment" />
+    </fragment>
+
 </navigation>
