@@ -19,21 +19,22 @@
         app:layout_constraintVertical_bias="0.992" />
 
     <Button
-        android:id="@+id/acc_btn"
+        android:id="@+id/loan_Btn"
         android:layout_width="150dp"
         android:layout_height="50dp"
-        android:text="@string/tarjetas"
+        android:text="@string/prestamos"
         app:layout_constraintBottom_toTopOf="@+id/exit_btn"
-        app:layout_constraintEnd_toStartOf="@+id/card_btn"
-        app:layout_constraintHorizontal_bias="0.213"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.885"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/card_btn"
         android:layout_width="150dp"
         android:layout_height="50dp"
-        android:layout_marginEnd="28dp"
-        android:text="@string/prestamos"
+        android:text="@string/tarjetas"
         app:layout_constraintBottom_toTopOf="@+id/exit_btn"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/loan_Btn"
+        app:layout_constraintHorizontal_bias="0.197"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

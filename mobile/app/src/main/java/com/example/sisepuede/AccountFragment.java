@@ -33,9 +33,24 @@ public class AccountFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController(AccountFragment.this)
-                        .navigate(R.id.action_SecondFragment_to_logginFragment);
+                        .navigate(R.id.action_AccFragment_to_logginFragment);
             }
         });
+        binding.cardBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(AccountFragment.this)
+                        .navigate(R.id.action_AccFragment_to_cardFragment);
+            }
+        });
+        binding.loanBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(AccountFragment.this)
+                        .navigate(R.id.action_AccFragment_to_loanFragment);
+            }
+        });
+
     }
 
     @Override

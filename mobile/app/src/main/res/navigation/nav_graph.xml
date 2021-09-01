@@ -22,8 +22,18 @@
         tools:layout="@layout/fragment_acc">
 
         <action
-            android:id="@+id/action_SecondFragment_to_logginFragment"
+            android:id="@+id/action_AccFragment_to_logginFragment"
             app:destination="@id/LogingFragment" />
+
+        <action
+            android:id="@+id/action_AccFragment_to_cardFragment"
+            app:destination="@id/CardFragment" />
+
+        <action
+            android:id="@+id/action_AccFragment_to_loanFragment"
+            app:destination="@id/LoanFragment" />
+
+
     </fragment>
 
     <fragment
@@ -45,7 +55,7 @@
 
     <fragment
         android:id="@+id/LoanFragment"
-        android:name="com.example.sisepuede.CardFragment"
+        android:name="com.example.sisepuede.LoanFragment"
         android:label="@string/prestamos"
         tools:layout="@layout/fragment_loan">
         >
