@@ -16,15 +16,15 @@
     <string name="prestamos">Prestamos</string>
 
     <string name="movimientos">Ver Movimiento</string>
-    <string name="numero_cuenta"># de Cuenta</string>
+    <string name="numero_cuenta">Numero de Cuenta</string>
     <string name="ver_tarjetas">Ver Tarjetas</string>
     <string name="ver_transferencias">Ver Transferencias</string>
 
-    <string name="numero_tarjeta"># de Tarjeta</string>
+    <string name="numero_tarjeta">Numero de Tarjeta</string>
     <string name="pagar">Pagar Tarjeta</string>
     <string name="lista_compras">Lista de Compras</string>
 
-    <string name="numero_prestamo"># de Prestamo</string>
+    <string name="numero_prestamo">Numero de Prestamo</string>
     <string name="monto_pago">Monto del Pago</string>
     <string name="ordinario">Pago Ordinario</string>
     <string name="extraordinario">Pago Extra-ordinario</string>
