@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/LogingFragment"
         android:name="com.example.sisepuede.LogginFragment"
-        android:label="@string/login"
+        android:label="@string/app_name"
         tools:layout="@layout/fragment_loggin">
 
         <action
