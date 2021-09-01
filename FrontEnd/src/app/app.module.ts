@@ -9,6 +9,7 @@ import { AccountsComponent } from './accounts/accounts.component';
 import { NavigationbarComponent } from './navigationbar/navigationbar.component';
 import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
+import { TarjetasComponent } from './tarjetas/tarjetas.component';
 
 @NgModule({
   declarations: [
@@ -17,13 +18,15 @@ import { RouterModule } from '@angular/router';
     ClientsComponent,
     AccountsComponent,
     NavigationbarComponent,
-    LoginComponent
+    LoginComponent,
+    TarjetasComponent
   ],
   imports: [
     BrowserModule,
     //AppRoutingModule
     RouterModule.forRoot([
       {path: 'login', component: LoginComponent},
+      {path: 'tarjetas', component: TarjetasComponent},
     ]),
   ],
   providers: [],
