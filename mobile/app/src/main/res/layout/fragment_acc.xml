@@ -37,4 +37,58 @@
         app:layout_constraintEnd_toStartOf="@+id/loan_Btn"
         app:layout_constraintHorizontal_bias="0.197"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="101dp"
+        android:ems="10"
+        android:hint="@string/numero_cuenta"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/mov_btn"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="81dp"
+        android:text="@string/movimientos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+
+    <Button
+        android:id="@+id/watch_cards_btn"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="81dp"
+        android:text="@string/ver_tarjetas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mov_btn" />
+
+    <Button
+        android:id="@+id/tranfer_btn"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="81dp"
+        android:text="@string/ver_transferencias"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/watch_cards_btn" />
 </androidx.constraintlayout.widget.ConstraintLayout>

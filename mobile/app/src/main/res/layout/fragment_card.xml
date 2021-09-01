@@ -50,7 +50,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/mov_btn"
+        android:id="@+id/pay_card_btn"
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:layout_marginTop="72dp"
@@ -61,7 +61,7 @@
         app:layout_constraintTop_toBottomOf="@+id/card_num_text" />
 
     <Button
-        android:id="@+id/watch_card_btn"
+        android:id="@+id/buy_list_btn"
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:layout_marginTop="80dp"
@@ -69,7 +69,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mov_btn" />
+        app:layout_constraintTop_toBottomOf="@+id/pay_card_btn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
