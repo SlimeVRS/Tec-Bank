@@ -13,10 +13,10 @@
         android:text="@string/salir"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.347"
+        app:layout_constraintHorizontal_bias="0.652"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.992" />
+        app:layout_constraintVertical_bias="0.976" />
 
     <Button
         android:id="@+id/loan_Btn"
@@ -25,7 +25,7 @@
         android:text="@string/prestamos"
         app:layout_constraintBottom_toTopOf="@+id/exit_btn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.885"
+        app:layout_constraintHorizontal_bias="0.938"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -35,7 +35,7 @@
         android:text="@string/tarjetas"
         app:layout_constraintBottom_toTopOf="@+id/exit_btn"
         app:layout_constraintEnd_toStartOf="@+id/loan_Btn"
-        app:layout_constraintHorizontal_bias="0.197"
+        app:layout_constraintHorizontal_bias="0.315"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
