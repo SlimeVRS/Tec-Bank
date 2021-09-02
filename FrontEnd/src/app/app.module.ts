@@ -10,6 +10,8 @@ import { NavigationbarComponent } from './navigationbar/navigationbar.component'
 import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
 import { TarjetasComponent } from './tarjetas/tarjetas.component';
+import { MonedaComponent } from './moneda/moneda.component';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { TarjetasComponent } from './tarjetas/tarjetas.component';
     AccountsComponent,
     NavigationbarComponent,
     LoginComponent,
-    TarjetasComponent
+    TarjetasComponent,
+    MonedaComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +30,7 @@ import { TarjetasComponent } from './tarjetas/tarjetas.component';
     RouterModule.forRoot([
       {path: 'login', component: LoginComponent},
       {path: 'tarjetas', component: TarjetasComponent},
+      {path: 'cuentas', component: AccountsComponent},
     ]),
   ],
   providers: [],
