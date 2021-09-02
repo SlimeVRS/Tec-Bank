@@ -11,7 +11,8 @@ import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
 import { TarjetasComponent } from './tarjetas/tarjetas.component';
 import { MonedaComponent } from './moneda/moneda.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -23,15 +24,18 @@ import { MonedaComponent } from './moneda/moneda.component';
     LoginComponent,
     TarjetasComponent,
     MonedaComponent
+    
   ],
   imports: [
     BrowserModule,
+    MatSelectModule,
     //AppRoutingModule
     RouterModule.forRoot([
       {path: 'login', component: LoginComponent},
       {path: 'tarjetas', component: TarjetasComponent},
       {path: 'cuentas', component: AccountsComponent},
     ]),
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
