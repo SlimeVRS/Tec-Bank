@@ -1,0 +1,31 @@
+[
+	{
+		"accountNumber": "accountNumber1",
+		"accountDescription":
+		"accountDescription1",
+		"accountCurrency": "accountCurrency1",
+		"accountType": "accountType1",
+		"accountOwner": "accountOwner1"
+	},
+	{
+		"accountNumber": "accountNumber2", 
+		"accountDescription": "accountDescription2", 
+		"accountCurrency": "accountCurrency2", 
+		"accountType": "accountType2", "accountOwner": "accountOwner2"
+	},
+	{
+		"accountNumber": "accountNumber3",
+		"accountDescription": "accountDescription3",
+		"accountCurrency": "accountCurrency3", "accountType": "accountType3",
+		"accountOwner": "accountOwner3"}, {"accountNumber": "accountNumber4",
+		"accountDescription": "accountDescription4", "accountCurrency": "accountCurrency4",
+		"accountType": "accountType4", "accountOwner": "accountOwner4"
+		},
+	{
+		"accountNumber": "accountNumber5",
+		"accountDescription": "accountDescription5",
+		"accountCurrency": "accountCurrency5",
+		"accountType": "accountType5",
+		"accountOwner": "accountOwner"
+	}
+]
