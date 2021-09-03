@@ -15,7 +15,7 @@ namespace Web_API.Controllers
         public HttpResponseMessage Get()
         {
             Console.WriteLine("This is a get response");
-            var response = JsonConvert.DeserializeObject(File.ReadAllText("F:\\Progras\\Web API\\Web API\\DataBase\\Clients.json"));
+            var response = JsonConvert.DeserializeObject(File.ReadAllText("[AQUI VA LA DIRECCION DEL JSON]"));
             return Request.CreateResponse(HttpStatusCode.OK, response);
         }
 
@@ -23,7 +23,7 @@ namespace Web_API.Controllers
         {
             try
             {
-                var data = JsonConvert.DeserializeObject(File.ReadAllText("F:\\Progras\\Web API\\Web API\\DataBase\\Clients.json"));
+                var data = JsonConvert.DeserializeObject(File.ReadAllText("[AQUI VA LA DIRECCION DEL JSON]"));
                 Console.WriteLine(role);
                 return "Added succesfully!!!";
             }
