@@ -13,7 +13,8 @@ import { TarjetasComponent } from './tarjetas/tarjetas.component';
 import { MonedaComponent } from './moneda/moneda.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSelectModule} from '@angular/material/select';
-
+import { ListaTarjetasComponent } from './lista-tarjetas/lista-tarjetas.component';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,12 +24,14 @@ import {MatSelectModule} from '@angular/material/select';
     NavigationbarComponent,
     LoginComponent,
     TarjetasComponent,
-    MonedaComponent
+    MonedaComponent,
+    ListaTarjetasComponent
     
   ],
   imports: [
     BrowserModule,
     MatSelectModule,
+    ReactiveFormsModule,
     //AppRoutingModule
     RouterModule.forRoot([
       {path: 'login', component: LoginComponent},
