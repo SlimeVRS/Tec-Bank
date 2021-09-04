@@ -6,6 +6,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using Web_API.Models;
 
 namespace Web_API.Controllers
@@ -15,7 +16,7 @@ namespace Web_API.Controllers
         public HttpResponseMessage Get()
         {
             Console.WriteLine("This is a get response");
-            var response = JsonConvert.DeserializeObject(File.ReadAllText("[AQUI VA LA DIRECCION DEL JSON]"));
+            var response = JsonConvert.DeserializeObject(File.ReadAllText("F:\\Progras\\Web API\\Web API\\DataBase\\Roles.json"));
             return Request.CreateResponse(HttpStatusCode.OK, response);
         }
 
@@ -23,13 +24,22 @@ namespace Web_API.Controllers
         {
             try
             {
-                var data = JsonConvert.DeserializeObject(File.ReadAllText("[AQUI VA LA DIRECCION DEL JSON]"));
-                Console.WriteLine(role);
-                return "Added succesfully!!!";
+                var filePath = @"F:\Progras\Web API\Web API\DataBase\Roles.json";
+                var jsonData = File.ReadAllText(filePath);
+                var roleList = JsonConvert.DeserializeObject<List<Role>>(jsonData) ?? new List<Role>();
+                roleList.Add(new Role()
+                {
+                    roleName = role.roleName,
+                    roleDescription = role.roleDescription
+                });
+
+                jsonData = JsonConvert.SerializeObject(roleList);
+                File.WriteAllText(filePath, jsonData);
+                return "Added Succesfully!!!";
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                return "Something went wrong...";
+                return e.StackTrace;
             }
         }
     }

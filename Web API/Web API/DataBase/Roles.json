@@ -1,14 +1,1 @@
-[
-	{
-		"roleName": "work1",
-		"roleDescription": "roleDescription1"
-	},
-	{
-		"roleName": "work2",
-		"roleDescription": "roleDescription2"
-	},
-	{
-		"roleName": "work3",
-		"roleDescription": "roleDescription3"
-	}
-]
+[{"roleName":"work1","roleDescription":"roleDescription1"},{"roleName":"work2","roleDescription":"roleDescription3"},{"roleName":"work1","roleDescription":"roleDescription1"}]
