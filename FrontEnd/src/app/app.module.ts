@@ -15,6 +15,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSelectModule} from '@angular/material/select';
 import { ListaTarjetasComponent } from './lista-tarjetas/lista-tarjetas.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
+import { HttpClientModule} from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +35,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     MatSelectModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    ToastrModule.forRoot(),
     //AppRoutingModule
     RouterModule.forRoot([
       {path: 'login', component: LoginComponent},

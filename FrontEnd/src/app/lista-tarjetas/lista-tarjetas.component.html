@@ -1,1 +1,24 @@
-<p>lista-tarjetas works!</p>
+<table class="table table-sm">
+    <tr *ngFor="let tarjeta of tarjetaCredito.data">
+        <td>
+            {{tarjeta.nombre}}
+        </td>
+        <td>
+            {{tarjeta.numeroTarjeta}}
+        </td>
+        <td>
+            {{tarjeta.tipoTarjeta}}
+        </td>
+        <td>
+            {{tarjeta.fecha}}
+        </td>
+        <td>
+            {{tarjeta.montoDisponible}}
+        </td>
+        <td>
+            {{tarjeta.cvv}}
+        </td>
+       
+    </tr>
+
+</table>

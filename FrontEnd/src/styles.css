@@ -2,3 +2,9 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+input.ng-touched.ng-invalid{
+    border-color:red;
+}
+input.ng-valid{
+    border-color: green;
+}
