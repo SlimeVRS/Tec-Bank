@@ -15,7 +15,6 @@ namespace Web_API.Controllers
     {
         public HttpResponseMessage Get()
         {
-            Console.WriteLine("This is a get response");
             var response = JsonConvert.DeserializeObject(File.ReadAllText("F:\\Progras\\Web API\\Web API\\DataBase\\Roles.json"));
             return Request.CreateResponse(HttpStatusCode.OK, response);
         }

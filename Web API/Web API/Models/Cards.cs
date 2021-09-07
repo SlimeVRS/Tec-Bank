@@ -7,10 +7,11 @@ namespace Web_API.Models
 {
     public class Cards
     {
-        public String cardNumber { get; set; }
-        public String cardType { get; set; }
-        public String cardExpiryDate { get; set; }
-        public String cardSecureCode { get; set; }
-        public String cardBalance { get; set; }
+        public String nombre { get; set; }
+        public String numeroTarjeta { get; set; }
+        public String tipoTarjeta { get; set; }
+        public String fecha { get; set; }
+        public String cvv { get; set; }
+        public String montoDisponible { get; set; }
     }
 }

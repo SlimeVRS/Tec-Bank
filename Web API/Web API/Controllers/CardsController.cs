@@ -15,16 +15,30 @@ namespace Web_API.Controllers
         public HttpResponseMessage Get()
         {
             Console.WriteLine("This is a get response");
-            var response = JsonConvert.DeserializeObject(File.ReadAllText("[AQUI VA LA DIRECCION DEL JSON]"));
+            var filePath = @"F:\Progras\Web API\Web API\DataBase\Cards.json";
+            var response = JsonConvert.DeserializeObject(File.ReadAllText(filePath));
             return Request.CreateResponse(HttpStatusCode.OK, response);
         }
 
-        public string Post(Role role)
+        public string Post(Cards card   )
         {
             try
             {
-                var data = JsonConvert.DeserializeObject(File.ReadAllText("[AQUI VA LA DIRECCION DEL JSON]"));
-                Console.WriteLine(role);
+                var filePath = @"F:\Progras\Web API\Web API\DataBase\Cards.json";
+                var jsonData = File.ReadAllText(filePath);
+                var cardList = JsonConvert.DeserializeObject<List<Cards>>(jsonData) ?? new List<Cards>();
+                cardList.Add(new Cards()
+                {
+                    nombre = card.nombre,
+                    numeroTarjeta = card.numeroTarjeta,
+                    tipoTarjeta = card.tipoTarjeta,
+                    fecha = card.fecha,
+                    cvv = card.cvv,
+                    montoDisponible = card.montoDisponible
+                });
+
+                jsonData = JsonConvert.SerializeObject(cardList);
+                File.WriteAllText(filePath, jsonData);
                 return "Added succesfully!!!";
             }
             catch (Exception)
