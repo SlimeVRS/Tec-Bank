@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-//import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RolesComponent } from './roles/roles.component';
 import { ClientsComponent } from './clients/clients.component';
@@ -16,6 +14,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { ListaTarjetasComponent } from './lista-tarjetas/lista-tarjetas.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
+
 import { HttpClientModule} from '@angular/common/http';
 
 @NgModule({
@@ -44,7 +43,7 @@ import { HttpClientModule} from '@angular/common/http';
       {path: 'tarjetas', component: TarjetasComponent},
       {path: 'cuentas', component: AccountsComponent},
     ]),
-    BrowserAnimationsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

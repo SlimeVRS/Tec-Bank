@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { TarjetaCredito } from '../models/tarjetaCredito';
+import { TarjetaService } from '../tarjeta.service';
 
 
 @Component({
@@ -11,12 +12,10 @@ import { TarjetaCredito } from '../models/tarjetaCredito';
 })
 export class TarjetasComponent implements OnInit {
   form: FormGroup;
-  data: TarjetaCredito[]= [];
-  //data: string[] =[];
-  
+  list: TarjetaCredito[];
   
 
-  constructor(private formBuilder: FormBuilder, private toastr: ToastrService) {
+  constructor(private formBuilder: FormBuilder, private tarjetaService: TarjetaService, private toastr: ToastrService) {
     this.form = this.formBuilder.group({
       id: 0,
       nombre: ['', [Validators.required]],
@@ -30,7 +29,7 @@ export class TarjetasComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  guardarDatos() {
+  guardarTarjeta() {
     const tarjeta: TarjetaCredito = {
       nombre: this.form.get('nombre').value,
       numeroTarjeta: this.form.get('numeroTarjeta').value,
@@ -40,22 +39,20 @@ export class TarjetasComponent implements OnInit {
       cvv:this.form.get('cvv').value,
       
     }
-    // this.data.push(tarjeta.nombre);
-    // this.data.push(tarjeta.numeroTarjeta);
-    // this.data.push(tarjeta.tipoTarjeta);
-    // this.data.push(tarjeta.fecha);
-    // this.data.push(tarjeta.montoDisponible);
-    // this.data.push(tarjeta.cvv);
-    this.data.push(tarjeta);
-    console.log(this.data);
-    console.log("Esta mierda tira aca");
-    console.log(tarjeta.cvv);
+    this.tarjetaService.guardarTarjeta(tarjeta).subscribe(data =>{
+      this.toastr.success('Tarjeta Guardada', 'Agregada Exitosamente');
+      this.form.reset();
+    });
+    
+    // this.data.push(tarjeta);
+    //console.log(this.data);
+    // console.log("Esta mierda tira aca");
+    // console.log(tarjeta.cvv);
   
    
     console.log(this.form);
     console.log(tarjeta);
-    this.toastr.success('Tarjeta Guardada', 'Agregada Exitosamente');
-    this.form.reset();
+    
   }
   
   
