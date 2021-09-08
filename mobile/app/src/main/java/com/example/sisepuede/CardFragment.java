@@ -65,6 +65,13 @@ public class CardFragment extends Fragment {
                         navigate(R.id.action_cardFragment_to_loanFragment);
             }
         });
+        binding.buyListBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(CardFragment.this).
+                        navigate(R.id.action_cardFragment_to_BuyListFrag);
+            }
+        });
 
     }
 

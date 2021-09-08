@@ -30,4 +30,7 @@
     <string name="monto_pago">Monto del Pago</string>
     <string name="ordinario">Pago Ordinario</string>
     <string name="extraordinario">Pago Extra-ordinario</string>
+
+    <string name="compras">Compras</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

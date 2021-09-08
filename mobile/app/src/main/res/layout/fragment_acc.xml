@@ -16,12 +16,13 @@
         app:layout_constraintHorizontal_bias="0.652"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976" />
+        app:layout_constraintVertical_bias="0.994" />
 
     <Button
         android:id="@+id/loan_Btn"
         android:layout_width="150dp"
         android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
         android:text="@string/prestamos"
         app:layout_constraintBottom_toTopOf="@+id/exit_btn"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,6 +33,7 @@
         android:id="@+id/card_btn"
         android:layout_width="150dp"
         android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
         android:text="@string/tarjetas"
         app:layout_constraintBottom_toTopOf="@+id/exit_btn"
         app:layout_constraintEnd_toStartOf="@+id/loan_Btn"
@@ -39,7 +41,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/acc_num_text"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_marginStart="100dp"
@@ -47,7 +49,8 @@
         android:layout_marginEnd="101dp"
         android:ems="10"
         android:hint="@string/numero_cuenta"
-        android:inputType="textPersonName"
+        android:inputType="number"
+        android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -64,7 +67,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/acc_num_text" />
 
     <Button
         android:id="@+id/watch_cards_btn"

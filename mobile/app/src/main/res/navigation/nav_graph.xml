@@ -21,6 +21,7 @@
         android:label="@string/cuenta"
         tools:layout="@layout/fragment_acc">
 
+
         <action
             android:id="@+id/action_AccFragment_to_logginFragment"
             app:destination="@id/LogingFragment" />
@@ -51,6 +52,9 @@
         <action
             android:id="@+id/action_cardFragment_to_loanFragment"
             app:destination="@id/LoanFragment" />
+        <action
+            android:id="@+id/action_cardFragment_to_BuyListFrag"
+            app:destination="@id/CardMovFragment"/>
     </fragment>
 
     <fragment
@@ -68,6 +72,14 @@
         <action
             android:id="@+id/action_LoanFragment_to_cardFragment"
             app:destination="@id/CardFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/CardMovFragment"
+        android:name="com.example.sisepuede.CardMovFragment"
+        android:label="@string/compras"
+        tools:layout="@layout/fragment_loan">
     </fragment>
 
 </navigation>

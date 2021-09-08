@@ -10,29 +10,33 @@
         android:id="@+id/exit_btn"
         android:layout_width="365dp"
         android:layout_height="50dp"
+        android:layout_marginBottom="4dp"
         android:text="@string/salir"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.652"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/acc_Btn"
         android:layout_width="150dp"
         android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
         android:text="@string/cuenta"
         app:layout_constraintBottom_toTopOf="@+id/exit_btn"
         app:layout_constraintEnd_toStartOf="@+id/cardBtn"
-        app:layout_constraintHorizontal_bias="0.261"
+        app:layout_constraintHorizontal_bias="0.315"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/cardBtn"
         android:layout_width="150dp"
         android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
         android:text="@string/tarjetas"
         app:layout_constraintBottom_toTopOf="@+id/exit_btn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.911"
+        app:layout_constraintHorizontal_bias="0.938"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
@@ -42,7 +46,8 @@
         android:layout_marginTop="80dp"
         android:ems="10"
         android:hint="@string/numero_prestamo"
-        android:inputType="textPersonName"
+        android:inputType="number"
+        android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -55,7 +60,8 @@
         android:layout_marginTop="48dp"
         android:ems="10"
         android:hint="@string/monto_pago"
-        android:inputType="textPersonName"
+        android:inputType="number"
+        android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
