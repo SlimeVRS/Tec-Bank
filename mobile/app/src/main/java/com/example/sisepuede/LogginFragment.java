@@ -19,8 +19,9 @@ public class LogginFragment extends Fragment {
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState
+            Bundle savedInstanceStat
     ) {
+
 
         binding = FragmentLogginBinding.inflate(inflater, container, false);
 
@@ -36,31 +37,41 @@ public class LogginFragment extends Fragment {
             public void onClick(View view) {
 
                 //llamada a la función que verifica si es un usuario valido
-                if(iniciarSesion()){
+                //if(iniciarSesion()){
+                if(true){
+                    send();
                     NavHostFragment.findNavController(LogginFragment.this)
                             .navigate(R.id.action_FirstFragment_to_AccFragment);
                 }
 
             }
-            public boolean iniciarSesion(){
-                //obtención de los datos del usuario
-                EditText user = (EditText) getActivity().findViewById(R.id.user_text);
-                EditText password = (EditText) getActivity().findViewById(R.id.pass_text);
-                System.out.println("");
-                System.out.println(user.getText().toString() );
-                System.out.println("asd");
-                //System.out.println(password.getText() );
-                //cambiar asd y 123 por el usuario y contrasena obtenida de
-                if(user.getText().toString().equals("asd") && password.getText().toString().equals("123")){
-                    return true;
-                }
-                else{
-                    return false;
-                }
-            }
+
         });
     }
+    private boolean iniciarSesion(){
+        //obtención de los datos del usuario
+        EditText user = (EditText) getActivity().findViewById(R.id.user_text);
+        EditText password = (EditText) getActivity().findViewById(R.id.pass_text);
+        System.out.println("");
+        System.out.println(user.getText().toString() );
+        System.out.println("asd");
+        //System.out.println(password.getText() );
+        //cambiar asd y 123 por el usuario y contrasena obtenida de
+        if(user.getText().toString().equals("asd") && password.getText().toString().equals("123")){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
 
+    private void send(){
+        //Envio del usuario al fragmento de cuentas
+        Bundle bundle= new Bundle();
+        EditText user = (EditText) getActivity().findViewById(R.id.user_text);
+        bundle.putString("user",user.getText().toString());
+        getParentFragmentManager().setFragmentResult("log_Key", bundle);
+    }
     @Override
     public void onDestroyView() {
         super.onDestroyView();
