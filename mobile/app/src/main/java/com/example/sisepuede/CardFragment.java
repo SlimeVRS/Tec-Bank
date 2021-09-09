@@ -9,9 +9,11 @@ import androidx.navigation.fragment.NavHostFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 
 import com.example.sisepuede.databinding.FragmentCardBinding;
 import com.example.sisepuede.databinding.FragmentLoanBinding;
+import com.google.android.material.snackbar.Snackbar;
 
 
 public class CardFragment extends Fragment {
@@ -68,14 +70,36 @@ public class CardFragment extends Fragment {
         binding.buyListBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(CardFragment.this).
-                        navigate(R.id.action_cardFragment_to_BuyListFrag);
+                EditText tarjeta = (EditText) getActivity().findViewById(R.id.card_num_text);
+                if(tarjeta.getText().toString().isEmpty()){
+                    Snackbar.make(view, "Ingrese un numero de tarjeta", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+                }
+                else{
+                    if(tarjeta.getText().toString().equals("123") || tarjeta.getText().toString().equals("987")){
+                    sendCard();
+                    NavHostFragment.findNavController(CardFragment.this).
+                            navigate(R.id.action_cardFragment_to_BuyListFrag);
+                    }
+                    else{
+                        Snackbar.make(view, "Esta tarjeta no tiene movimientos", Snackbar.LENGTH_LONG)
+                                .setAction("Action", null).show();
+                    }
+                }
+
+
             }
         });
 
     }
 
-
+    private void sendCard(){
+        //Envio del usuario al fragmento de cuentas
+        Bundle bundle= new Bundle();
+        EditText card = (EditText) getActivity().findViewById(R.id.card_num_text);
+        bundle.putString("card_num",card.getText().toString());
+        getParentFragmentManager().setFragmentResult("card_Key", bundle);
+    }
 
     @Override
     public void onDestroyView() {

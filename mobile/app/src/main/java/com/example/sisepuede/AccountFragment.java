@@ -27,9 +27,7 @@ public class AccountFragment extends Fragment {
         getParentFragmentManager().setFragmentResultListener("log_Key", this, new FragmentResultListener() {
             @Override
             public void onFragmentResult(@NonNull String key, @NonNull Bundle bundle) {
-                // We use a String here, but any type that can be put in a Bundle is supported
                 user = bundle.getString("user");
-                // Do something with the result...
 
             }
         });
@@ -51,6 +49,7 @@ public class AccountFragment extends Fragment {
                             .setAction("Action", null).show();
                 }
                 else{
+
                     Snackbar.make(view, user, Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
                 }
@@ -80,6 +79,7 @@ public class AccountFragment extends Fragment {
         });
 
     }
+
 
     @Override
     public void onDestroyView() {

@@ -8,13 +8,25 @@
 
     <ListView
         android:id="@+id/listaa"
-        android:layout_width="411dp"
-        android:layout_height="599dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="408dp"
+        android:layout_height="554dp"
+        app:layout_constraintBottom_toTopOf="@+id/show_buys"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/show_buys"
+        android:layout_width="310dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginBottom="4dp"
+        android:text="@string/mostrar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

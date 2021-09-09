@@ -4,18 +4,21 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.fragment.NavHostFragment;
+import androidx.fragment.app.FragmentResultListener;
+
+
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
+
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.sisepuede.databinding.FragmentCardMovBinding;
 import com.google.android.material.snackbar.Snackbar;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,12 +29,19 @@ public class CardMovFragment extends Fragment {
     private ListView list;
     private List<String> datos = new ArrayList<>();
     private ArrayAdapter<String> adapter;
+    private String cardNum;
 
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState
     ) {
+        getParentFragmentManager().setFragmentResultListener("card_Key", getActivity(), new FragmentResultListener() {
+            @Override
+            public void onFragmentResult(@NonNull String key, @NonNull Bundle bundle) {
+                cardNum = bundle.getString("card_num");
+            }
+        });
         binding = FragmentCardMovBinding.inflate(inflater, container, false);
         return binding.getRoot();
     }
@@ -40,11 +50,27 @@ public class CardMovFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         list=getActivity().findViewById(R.id.listaa);
 
-        addText("hola");
-        addText("como");
-        addText("estas");
-        adapter=new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1,datos);
-        list.setAdapter(adapter);
+
+
+
+        binding.showBuys.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                System.out.println(cardNum);
+                if (cardNum.equals("123")){
+                    card_1();
+                }
+                if (cardNum.equals("987")){
+                    card_2();
+                }
+                else{
+                    addText("No hay movimientos");
+                }
+                adapter=new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1,datos);
+                list.setAdapter(adapter);
+            }
+        });
 
 
 
@@ -59,7 +85,17 @@ public class CardMovFragment extends Fragment {
                 .setText("hello");
         return convertView;
     }
-
+    private void card_1(){
+        addText("Pago Carro -150000");
+        addText("Pago Agua  -10000");
+        addText("walmart    -100000");
+        addText("SINPE      +30000");
+    }
+    private void card_2(){
+        addText("Telecable  -35000");
+        addText("Claro      -12000");
+        addText("SINPE      +30000");
+    }
     private void addText(String text){
         datos.add(text);
     }
