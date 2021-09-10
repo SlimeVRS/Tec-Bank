@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { TarjetaCredito } from './models/tarjetaCredito';
+import { TarjetaCredito } from '../models/tarjetaCredito';
 import { Observable } from 'rxjs';
 import { data } from 'jquery';
 
@@ -23,5 +23,8 @@ export class TarjetaService {
       this.list = data as TarjetaCredito[];
     }
     );
+  }
+  eliminarTarjeta(id: number): Observable<TarjetaCredito>{
+    return this.http.delete<TarjetaCredito>('http://localhost:50394/api/TarjetaCredito'+ id);
   }
 }

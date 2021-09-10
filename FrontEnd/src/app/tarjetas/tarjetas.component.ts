@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { TarjetaCredito } from '../models/tarjetaCredito';
-import { TarjetaService } from '../tarjeta.service';
+import { TarjetaService } from '../services/tarjeta.service';
 
 
 @Component({
@@ -31,6 +31,7 @@ export class TarjetasComponent implements OnInit {
   }
   guardarTarjeta() {
     const tarjeta: TarjetaCredito = {
+      id:0,
       nombre: this.form.get('nombre').value,
       numeroTarjeta: this.form.get('numeroTarjeta').value,
       tipoTarjeta:this.form.get('tipoTarjeta').value,
@@ -43,12 +44,6 @@ export class TarjetasComponent implements OnInit {
       this.toastr.success('Tarjeta Guardada', 'Agregada Exitosamente');
       this.form.reset();
     });
-    
-    // this.data.push(tarjeta);
-    //console.log(this.data);
-    // console.log("Esta mierda tira aca");
-    // console.log(tarjeta.cvv);
-  
    
     console.log(this.form);
     console.log(tarjeta);
