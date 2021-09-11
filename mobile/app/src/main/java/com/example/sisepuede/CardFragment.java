@@ -18,24 +18,13 @@ import com.google.android.material.snackbar.Snackbar;
 
 public class CardFragment extends Fragment {
     private FragmentCardBinding binding;
-
-
-
-
-    public CardFragment() {
-        // Required empty public constructor
-    }
-
+    private String cant;
+    private String card;
 
     public static CardFragment newInstance(String param1, String param2) {
         CardFragment fragment = new CardFragment();
 
         return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
     }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -46,6 +35,43 @@ public class CardFragment extends Fragment {
     }
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        binding.payCardBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EditText cantidad=(EditText) getActivity().findViewById(R.id.card_pay_amount_text);
+                EditText tarjeta=(EditText) getActivity().findViewById(R.id.card_num_text);
+                cant= cantidad.getText().toString();
+                card= tarjeta.getText().toString();
+                if (card.isEmpty()){
+                    Snackbar.make(view, "Debe ingresar la tarjeta ", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+
+                }
+                if(card.equals("123")){
+                    if(cant.isEmpty()){
+                        Snackbar.make(view, "Debe ingresar el monto a pagar", Snackbar.LENGTH_LONG)
+                                .setAction("Action", null).show();
+
+                    }
+                    else {
+                        Snackbar.make(view, "Se realizo el pago de: "+cant+
+                                "\n a la tarjeta: "+card, Snackbar.LENGTH_LONG)
+                                .setAction("Action", null).show();
+                    }
+                }
+                if(card.equals("456")){
+                        Snackbar.make(view, "Esta tarjeta es de Debito", Snackbar.LENGTH_LONG)
+                                .setAction("Action", null).show();
+                }
+                else{
+                    Snackbar.make(view, "No se encontro la tarjeta", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+
+                }
+
+            }
+        });
         binding.accBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

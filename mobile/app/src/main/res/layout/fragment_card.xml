@@ -57,23 +57,39 @@
         android:id="@+id/pay_card_btn"
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="48dp"
         android:text="@string/pagar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/card_num_text" />
+        app:layout_constraintTop_toBottomOf="@+id/card_pay_amount_text" />
 
     <Button
         android:id="@+id/buy_list_btn"
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="60dp"
         android:text="@string/lista_compras"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pay_card_btn" />
+
+    <EditText
+        android:id="@+id/card_pay_amount_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="101dp"
+        android:ems="10"
+        android:hint="@string/monto_pago"
+        android:inputType="number"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_num_text" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
