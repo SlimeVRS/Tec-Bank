@@ -45,7 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="116dp"
         android:layout_marginEnd="101dp"
         android:ems="10"
         android:hint="@string/numero_cuenta"
@@ -61,7 +61,7 @@
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:layout_marginStart="80dp"
-        android:layout_marginTop="65dp"
+        android:layout_marginTop="96dp"
         android:layout_marginEnd="81dp"
         android:text="@string/movimientos"
         app:layout_constraintEnd_toEndOf="parent"
@@ -70,28 +70,15 @@
         app:layout_constraintTop_toBottomOf="@+id/acc_num_text" />
 
     <Button
-        android:id="@+id/watch_cards_btn"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="55dp"
-        android:layout_marginEnd="81dp"
-        android:text="@string/ver_tarjetas"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mov_btn" />
-
-    <Button
         android:id="@+id/tranfer_btn"
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:layout_marginStart="80dp"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="76dp"
         android:layout_marginEnd="81dp"
-        android:text="@string/ver_transferencias"
+        android:text="@string/hacer_transferencia"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/watch_cards_btn" />
+        app:layout_constraintTop_toBottomOf="@+id/mov_btn" />
 </androidx.constraintlayout.widget.ConstraintLayout>

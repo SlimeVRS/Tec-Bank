@@ -15,7 +15,7 @@ namespace Web_API.Controllers
     {
         public HttpResponseMessage Get()
         {
-            var response = JsonConvert.DeserializeObject(File.ReadAllText(@"C:\Users\Brandon\Desktop\Tec-Bank\Web API\Web API\DataBase\Roles.json"));
+            var response = JsonConvert.DeserializeObject(File.ReadAllText(@"C:\Users\Erick\Desktop\tc1\Tec-Bank\Web API\Web API\DataBase\Roles.json"));
             return Request.CreateResponse(HttpStatusCode.OK, response);
         }
 

@@ -44,16 +44,36 @@ public class AccountFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 EditText cuenta = (EditText) getActivity().findViewById(R.id.acc_num_text);
-                if(cuenta.getText().toString().isEmpty()){
+                if (cuenta.getText().toString().isEmpty()) {
                     Snackbar.make(view, "Ingrese un numero de cuenta", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
                 }
-                else{
 
-                    Snackbar.make(view, user, Snackbar.LENGTH_LONG)
+                if (cuenta.getText().toString().equals("123") || cuenta.getText().toString().equals("135")) {
+                    NavHostFragment.findNavController(AccountFragment.this)
+                            .navigate(R.id.action_AccFragment_to_TransferFragment);
+
+                } else {
+                    Snackbar.make(view, "No se encontro esta cuenta", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
                 }
+            }
+        });
 
+
+        binding.tranferBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EditText cuenta = (EditText) getActivity().findViewById(R.id.acc_num_text);
+                if (cuenta.getText().toString().equals("123") || cuenta.getText().toString().equals("135") ){
+                    NavHostFragment.findNavController(AccountFragment.this)
+                            .navigate(R.id.action_AccFragment_to_TransferFragment);
+
+                }
+                else{
+                    Snackbar.make(view, "No se encontro esta cuenta", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+                }
             }
         });
         binding.exitBtn.setOnClickListener(new View.OnClickListener() {

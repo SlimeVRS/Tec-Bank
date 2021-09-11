@@ -21,7 +21,9 @@
         android:label="@string/cuenta"
         tools:layout="@layout/fragment_acc">
 
-
+        <action
+            android:id="@+id/action_AccFragment_to_TransferFragment"
+            app:destination="@id/transferFtagment"/>
         <action
             android:id="@+id/action_AccFragment_to_logginFragment"
             app:destination="@id/LogingFragment" />
@@ -82,4 +84,11 @@
         tools:layout="@layout/fragment_loan">
     </fragment>
 
+    <fragment
+        android:id="@+id/transferFtagment"
+        android:name="com.example.sisepuede.TranferenciaFragment"
+        android:label="@string/tranferencias"
+        tools:layout="@layout/fragment_tranferencia">
+
+    </fragment>
 </navigation>

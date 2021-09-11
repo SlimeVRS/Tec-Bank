@@ -15,7 +15,7 @@ namespace Web_API.Controllers
         public HttpResponseMessage Get()
         {
             Console.WriteLine("This is a get response");
-            var filePath = @"C:\Users\Brandon\Desktop\Tec-Bank\Web API\Web API\DataBase\Cards.json";
+            var filePath = @"C:\Users\Erick\Desktop\tc1\Tec-Bank\Web API\DataBase\Cards.json";
             var response = JsonConvert.DeserializeObject(File.ReadAllText(filePath));
             return Request.CreateResponse(HttpStatusCode.OK, response);
         }
@@ -24,7 +24,7 @@ namespace Web_API.Controllers
         {
             try
             {
-                var filePath = @"C:\Users\Brandon\Desktop\Tec-Bank\Web API\Web API\DataBase\Cards.json";
+                var filePath = @"C:\Users\Erick\Desktop\tc1\Tec-Bank\Web API\DataBase\Cards.json";
                 var jsonData = File.ReadAllText(filePath);
                 var cardList = JsonConvert.DeserializeObject<List<TarjetaCredito>>(jsonData) ?? new List<TarjetaCredito>();
                 cardList.Add(new TarjetaCredito()
