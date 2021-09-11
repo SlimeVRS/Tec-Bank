@@ -35,6 +35,9 @@
         <action
             android:id="@+id/action_AccFragment_to_loanFragment"
             app:destination="@id/LoanFragment" />
+        <action
+            android:id="@+id/action_AccFragment_to_AccMovFragment"
+            app:destination="@id/AccMovFtagment"/>
 
 
     </fragment>
@@ -89,6 +92,12 @@
         android:name="com.example.sisepuede.TranferenciaFragment"
         android:label="@string/tranferencias"
         tools:layout="@layout/fragment_tranferencia">
-
     </fragment>
+    <fragment
+        android:id="@+id/AccMovFtagment"
+        android:name="com.example.sisepuede.AccMovFragment"
+        android:label="@string/movimiento"
+        tools:layout="@layout/fragment_acc_mov">
+    </fragment>
+
 </navigation>

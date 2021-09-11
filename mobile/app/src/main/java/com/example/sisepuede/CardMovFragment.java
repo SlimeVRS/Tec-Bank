@@ -50,9 +50,6 @@ public class CardMovFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         list=getActivity().findViewById(R.id.listaa);
 
-
-
-
         binding.showBuys.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

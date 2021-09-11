@@ -39,4 +39,7 @@
     <string name="envio">Enviar Pago</string>
     <string name="cuent_envio">Cuenta del destinatario</string>
     <string name="cantidad">Monto de tranferencia</string>
+
+    <string name="movimiento">Movimientos</string>
+
 </resources>

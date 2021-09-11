@@ -49,11 +49,17 @@ public class AccountFragment extends Fragment {
                             .setAction("Action", null).show();
                 }
 
-                if (cuenta.getText().toString().equals("123") || cuenta.getText().toString().equals("135")) {
+                if (cuenta.getText().toString().equals("123") ) {
                     NavHostFragment.findNavController(AccountFragment.this)
-                            .navigate(R.id.action_AccFragment_to_TransferFragment);
+                            .navigate(R.id.action_AccFragment_to_AccMovFragment);
 
-                } else {
+                }
+                if (cuenta.getText().toString().equals("135") ) {
+                    Snackbar.make(view, "Esta cuenta no posee movimientos", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+
+                }
+                else {
                     Snackbar.make(view, "No se encontro esta cuenta", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
                 }
