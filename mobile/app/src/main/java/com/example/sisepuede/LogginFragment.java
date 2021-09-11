@@ -38,7 +38,7 @@ public class LogginFragment extends Fragment {
 
                 //llamada a la función que verifica si es un usuario valido
                 //if(iniciarSesion()){
-                if(true){
+                if(iniciarSesion()){
                     send();
                     NavHostFragment.findNavController(LogginFragment.this)
                             .navigate(R.id.action_FirstFragment_to_AccFragment);
@@ -52,12 +52,9 @@ public class LogginFragment extends Fragment {
         //obtención de los datos del usuario
         EditText user = (EditText) getActivity().findViewById(R.id.user_text);
         EditText password = (EditText) getActivity().findViewById(R.id.pass_text);
-        System.out.println("");
-        System.out.println(user.getText().toString() );
-        System.out.println("asd");
-        //System.out.println(password.getText() );
-        //cambiar asd y 123 por el usuario y contrasena obtenida de
-        if(user.getText().toString().equals("asd") && password.getText().toString().equals("123")){
+
+
+        if(user.getText().toString().equals("user1") && password.getText().toString().equals("123")){
             return true;
         }
         else{
