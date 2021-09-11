@@ -9,29 +9,18 @@ import androidx.navigation.fragment.NavHostFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 
 import com.example.sisepuede.databinding.FragmentLoanBinding;
+import com.google.android.material.snackbar.Snackbar;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link LoanFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class LoanFragment extends Fragment {
     private FragmentLoanBinding binding;
+    private String cant;
+    private String loan;
 
 
-    public static LoanFragment newInstance(String param1, String param2) {
-        LoanFragment fragment = new LoanFragment();
 
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -42,6 +31,55 @@ public class LoanFragment extends Fragment {
     }
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        binding.ordBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EditText prestamo=(EditText) getActivity().findViewById(R.id.action_LoanFragment_to_accFragment);
+                EditText cantidad=(EditText) getActivity().findViewById(R.id.action_LoanFragment_to_accFragment);
+                loan=prestamo.getText().toString();
+                cant=cantidad.getText().toString();
+                if (loan.isEmpty() || cant.isEmpty()){
+                    Snackbar.make(view, "Debe ingresar la cuenta y el monto", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+
+                }
+                if(loan.equals("123")){
+                    Snackbar.make(view, "Se realizó el pago ordinario de: "+cantidad+"\n A la cuenta: "+loan, Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+                }
+                if(loan.equals("456")){
+                    Snackbar.make(view, "Esta cuenta esta al dia", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+                }
+                else{
+                    Snackbar.make(view, "El prestamo ingresado no existe", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+                }
+            }
+        });
+        binding.extraBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EditText prestamo=(EditText) getActivity().findViewById(R.id.action_LoanFragment_to_accFragment);
+                EditText cantidad=(EditText) getActivity().findViewById(R.id.action_LoanFragment_to_accFragment);
+                loan=prestamo.getText().toString();
+                cant=cantidad.getText().toString();
+                if (loan.isEmpty() || cant.isEmpty()){
+                    Snackbar.make(view, "Debe ingresar la cuenta y el monto", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+
+                }
+                if(loan.equals("123") || loan.equals("456")){
+                    Snackbar.make(view, "Se realizó el pago extra ordinario de: "+cantidad+"\n A la cuenta: "+loan, Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+                }
+                else{
+                    Snackbar.make(view, "El prestamo ingresado no existe", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+                }
+            }
+        });
         binding.accBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
