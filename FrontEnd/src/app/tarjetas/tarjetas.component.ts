@@ -13,6 +13,8 @@ import { TarjetaService } from '../services/tarjeta.service';
 export class TarjetasComponent implements OnInit {
   form: FormGroup;
   list: TarjetaCredito[];
+  tarjeta: TarjetaCredito;
+  idTarjeta: 0;
   
 
   constructor(private formBuilder: FormBuilder, private tarjetaService: TarjetaService, private toastr: ToastrService) {
@@ -28,10 +30,22 @@ export class TarjetasComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.tarjetaService.obtenerTarjeta().subscribe(data=>{
+      console.log(data);
+      this.tarjeta =data;
+      this.form.patchValue({
+        nombre: this.tarjeta.nombre,
+        numeroTarjeta: this.tarjeta.numeroTarjeta,
+        tipoTarjeta:this.tarjeta.tipoTarjeta,
+        fecha:this.tarjeta.fecha,
+        montoDisponible:this.tarjeta.montoDisponible,
+        cvv:this.tarjeta.cvv
+      })
+    })
   }
   guardarTarjeta() {
     const tarjeta: TarjetaCredito = {
-      id:0,
+      id:this.idTarjeta,
       nombre: this.form.get('nombre').value,
       numeroTarjeta: this.form.get('numeroTarjeta').value,
       tipoTarjeta:this.form.get('tipoTarjeta').value,
@@ -40,6 +54,7 @@ export class TarjetasComponent implements OnInit {
       cvv:this.form.get('cvv').value,
       
     }
+    this.idTarjeta+1;
     this.tarjetaService.guardarTarjeta(tarjeta).subscribe(data =>{
       this.toastr.success('Tarjeta Guardada', 'Agregada Exitosamente');
       this.form.reset();

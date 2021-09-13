@@ -10,7 +10,8 @@ import { TarjetasComponent } from '../tarjetas/tarjetas.component';
   styleUrls: ['./lista-tarjetas.component.css']
 })
 export class ListaTarjetasComponent implements OnInit {
-
+  enableEdit = false;
+  enableEditIndex = null;
   constructor(public tarjetaService:TarjetaService, public toastr:ToastrService) { }
 
   ngOnInit(): void {
@@ -26,6 +27,14 @@ export class ListaTarjetasComponent implements OnInit {
     //    this.tarjetaService.obtenerTarjetas();
     //  })
    }
+  }
+  editar(tarjeta){
+    this.tarjetaService.actualizar(tarjeta);
+  }
+  enableEditMethod(e, i) {
+    this.enableEdit = true;
+    this.enableEditIndex = i;
+    console.log(i, e);
   }
 
 }
