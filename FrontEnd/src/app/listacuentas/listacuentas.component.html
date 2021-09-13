@@ -1,31 +1,31 @@
 <table class="table table-sm">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-    <tr *ngFor="let tarjeta of tarjetaService.list">
+    <tr *ngFor="let cuenta of cuenta.data">
         <td>
-            {{tarjeta.nombre}}
+            {{cuenta.numeroCuenta}}
         </td>
         <td>
-            {{tarjeta.numeroTarjeta}}
+            {{cuenta.descripcionCuenta}}
         </td>
         <td>
-            {{tarjeta.tipoTarjeta}}
+            {{cuenta.cliente}}
         </td>
         <td>
-            {{tarjeta.fecha}}
+            {{cuenta.tipoCuenta}}
         </td>
         <td>
-            {{tarjeta.montoDisponible}}
+            {{cuenta.montoDisponible}}
         </td>
         <td>
-            {{tarjeta.cvv}}
+            {{cuenta.moneda}}
         </td>
         <td>
             <i class="far fa-edit fa-lg text-info" style="cursor: pointer;"></i>
         </td>
         <td>
-            <i class="far fa-trash-alt fa-lg text-danger" (click)="eliminarTarjeta(tarjeta)" style="cursor: pointer;"></i>
+            <i class="far fa-trash-alt fa-lg text-danger" (click)="eliminarCuenta(cuenta)" style="cursor: pointer;"></i>
         </td>
-       
+
     </tr>
 
 </table>

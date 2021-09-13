@@ -16,13 +16,15 @@ export class ListaTarjetasComponent implements OnInit {
   ngOnInit(): void {
     this.tarjetaService.obtenerTarjetas(); 
   }
-  eliminarTarjeta(id:number){
+  eliminarTarjeta(id){
    if(confirm('Desea eliminar la tarjeta?')){
-     this.tarjetaService.eliminarTarjeta(id).subscribe(data=>{
-       this.toastr.warning('Eliminar Exitoso', 'Tarjeta Eliminada');
+   const index = this.tarjetaService.list.indexOf(id);
+    this.tarjetaService.list.splice(index,1);
+    //  this.tarjetaService.eliminarTarjeta(id).subscribe(data=>{
+    //    this.toastr.warning('Eliminar Exitoso', 'Tarjeta Eliminada');
 
-       this.tarjetaService.obtenerTarjetas();
-     })
+    //    this.tarjetaService.obtenerTarjetas();
+    //  })
    }
   }
 

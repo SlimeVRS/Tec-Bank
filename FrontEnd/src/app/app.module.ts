@@ -18,6 +18,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { HttpClientModule} from '@angular/common/http';
 import { ListarolesComponent } from './listaroles/listaroles.component';
 import { MoraComponent } from './mora/mora.component';
+import { ListacuentasComponent } from './listacuentas/listacuentas.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { MoraComponent } from './mora/mora.component';
     MonedaComponent,
     ListaTarjetasComponent,
     ListarolesComponent,
-    MoraComponent
+    MoraComponent,
+    ListacuentasComponent
     
   ],
   imports: [
