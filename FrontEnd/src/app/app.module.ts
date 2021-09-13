@@ -16,6 +16,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 
 import { HttpClientModule} from '@angular/common/http';
+import { ListarolesComponent } from './listaroles/listaroles.component';
+import { MoraComponent } from './mora/mora.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { HttpClientModule} from '@angular/common/http';
     LoginComponent,
     TarjetasComponent,
     MonedaComponent,
-    ListaTarjetasComponent
+    ListaTarjetasComponent,
+    ListarolesComponent,
+    MoraComponent
     
   ],
   imports: [
@@ -41,6 +45,8 @@ import { HttpClientModule} from '@angular/common/http';
     RouterModule.forRoot([
       {path: 'login', component: LoginComponent},
       {path: 'tarjetas', component: TarjetasComponent},
+      {path: 'roles', component: RolesComponent},
+      {path: 'clientes', component: ClientsComponent},
       {path: 'cuentas', component: AccountsComponent},
     ]),
     BrowserAnimationsModule
