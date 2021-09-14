@@ -11,11 +11,13 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.sisepuede.databinding.FragmentLogginBinding;
+import com.google.android.material.snackbar.Snackbar;
 
 public class LogginFragment extends Fragment {
 
     private FragmentLogginBinding binding;
-
+    private String usuario;
+    private String pass;
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container,
@@ -35,13 +37,22 @@ public class LogginFragment extends Fragment {
         binding.buttonFirst.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                //llamada a la función que verifica si es un usuario valido
-                //if(iniciarSesion()){
+                EditText user = (EditText) getActivity().findViewById(R.id.user_text);
+                EditText password = (EditText) getActivity().findViewById(R.id.pass_text);
+                usuario= user.getText().toString();
+                pass=password.getText().toString();
+                if(usuario.isEmpty() ||pass.isEmpty()){
+                    Snackbar.make(view, "Debe ingresar un usuario y la contraseña ", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+                }
                 if(iniciarSesion()){
                     send();
                     NavHostFragment.findNavController(LogginFragment.this)
                             .navigate(R.id.action_FirstFragment_to_AccFragment);
+                }
+                if (!iniciarSesion()){
+                    Snackbar.make(view, "Usuario o contraseña incorrecta ", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
                 }
 
             }
