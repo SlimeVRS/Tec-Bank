@@ -15,7 +15,7 @@ namespace Web_API.Controllers
     {
         public HttpResponseMessage Get()
         {
-            var filePath = @"C:\Users\Brandon\Desktop\Tec-Bank\Web API\Web API\DataBase\Roles.json";
+            var filePath = @"DataBase\Roles.json";
             var response = JsonConvert.DeserializeObject(File.ReadAllText(filePath));
             return Request.CreateResponse(HttpStatusCode.OK, response);
         }
@@ -26,7 +26,7 @@ namespace Web_API.Controllers
         {
             try
             {
-                var filePath = @"C:\Users\Brandon\Desktop\Tec-Bank\Web API\Web API\DataBase\Roles.json";
+                var filePath = @"DataBase\Roles.json";
                 var jsonData = File.ReadAllText(filePath);
                 var roleList = JsonConvert.DeserializeObject<List<Roles>>(jsonData) ?? new List<Roles>();
                 Roles item = roleList.Find(o => o.nombre == nombre);
@@ -42,7 +42,7 @@ namespace Web_API.Controllers
         {
             try
             {
-                var filePath = @"C:\Users\Brandon\Desktop\Tec-Bank\Web API\Web API\DataBase\Roles.json";
+                var filePath = @"DataBase\Roles.json";
                 var jsonData = File.ReadAllText(filePath);
                 var roleList = JsonConvert.DeserializeObject<List<Roles>>(jsonData) ?? new List<Roles>();
                 roleList.Add(new Roles()
@@ -67,7 +67,7 @@ namespace Web_API.Controllers
         {
             try
             {
-                var filePath = @"C:\Users\Brandon\Desktop\Tec-Bank\Web API\Web API\DataBase\Roles.json";
+                var filePath = @"DataBase\Roles.json";
                 var jsonData = File.ReadAllText(filePath);
                 var roleList = JsonConvert.DeserializeObject<List<Roles>>(jsonData) ?? new List<Roles>();
                 foreach (Roles item in roleList)

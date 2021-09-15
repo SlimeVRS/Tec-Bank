@@ -14,7 +14,7 @@ namespace Web_API.Controllers
     {
         public HttpResponseMessage Get()
         {
-            var filePath = @"C:\Users\Brandon\Desktop\Tec-Bank\Web API\Web API\DataBase\Cards.json";
+            var filePath = @"DataBase\Clients.json";
             var response = JsonConvert.DeserializeObject(File.ReadAllText(filePath));
             return Request.CreateResponse(HttpStatusCode.OK, response);
         }
@@ -25,7 +25,7 @@ namespace Web_API.Controllers
         {
             try
             {
-                var filePath = @"C:\Users\Brandon\Desktop\Tec-Bank\Web API\Web API\DataBase\Cards.json";
+                var filePath = @"DataBase\Clients.json";
                 var jsonData = File.ReadAllText(filePath);
                 var clientList = JsonConvert.DeserializeObject<List<Clientes>>(jsonData) ?? new List<Clientes>();
                 Clientes item = clientList.Find(o => o.cedulaCliente == cedulaCliente);
@@ -40,7 +40,7 @@ namespace Web_API.Controllers
         {
             try
             {
-                var filePath = @"C:\Users\Brandon\Desktop\Tec-Bank\Web API\Web API\DataBase\Cards.json";
+                var filePath = @"DataBase\Clients.json";
                 var jsonData = File.ReadAllText(filePath);
                 var clientList = JsonConvert.DeserializeObject<List<Clientes>>(jsonData) ?? new List<Clientes>();
                 clientList.Add(new Clientes()
@@ -70,7 +70,7 @@ namespace Web_API.Controllers
         {
             try
             {
-                var filePath = @"C:\Users\Brandon\Desktop\Tec-Bank\Web API\Web API\DataBase\Cards.json";
+                var filePath = @"DataBase\Clients.json";
                 var jsonData = File.ReadAllText(filePath);
                 var clientList = JsonConvert.DeserializeObject<List<Clientes>>(jsonData) ?? new List<Clientes>();
                 foreach (Clientes item in clientList)
