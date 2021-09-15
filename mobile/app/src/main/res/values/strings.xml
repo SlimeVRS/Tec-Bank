@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Tec Bank</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+
+    <string name="salir">Salir</string>
+
+    <string name="admin">Adminitrador</string>
+    <string name="user">Usuario</string>
+    <string name="password">Contraseña</string>
+
+
+    <string name="login">Login</string>
+    <string name="cuenta">Cuentas</string>
+    <string name="tarjetas">Tarjetas</string>
+    <string name="prestamos">Prestamos</string>
+
+    <string name="movimientos">Ver Movimiento</string>
+    <string name="numero_cuenta">Numero de Cuenta</string>
+    <string name="ver_tarjetas">Ver Tarjetas</string>
+    <string name="hacer_transferencia">Hacer Transferencia</string>
+
+    <string name="numero_tarjeta">Numero de Tarjeta</string>
+    <string name="pagar">Pagar Tarjeta</string>
+    <string name="lista_compras">Lista de Compras</string>
+
+    <string name="numero_prestamo">Numero de Prestamo</string>
+    <string name="monto_pago">Monto del Pago</string>
+    <string name="ordinario">Pago Ordinario</string>
+    <string name="extraordinario">Pago Extra-ordinario</string>
+
+    <string name="compras">Compras</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="mostrar">Mostrar</string>
+
+    <string name="tranferencias">Tranferencias</string>
+    <string name="envio">Enviar Pago</string>
+    <string name="cuent_envio">Cuenta del destinatario</string>
+    <string name="cantidad">Monto de tranferencia</string>
+
+    <string name="movimiento">Movimientos</string>
+
+</resources>
