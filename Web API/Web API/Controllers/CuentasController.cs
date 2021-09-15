@@ -10,26 +10,25 @@ using Web_API.Models;
 
 namespace Web_API.Controllers
 {
-    public class TarjetaCreditoController : ApiController
+    public class CuentasController : ApiController
     {
         public HttpResponseMessage Get()
         {
-            Console.WriteLine("This is a get response");
             var filePath = @"C:\Users\Brandon\Desktop\Tec-Bank\Web API\Web API\DataBase\Cards.json";
             var response = JsonConvert.DeserializeObject(File.ReadAllText(filePath));
             return Request.CreateResponse(HttpStatusCode.OK, response);
         }
 
-        [Route("api/TarjetaCredito/{numeroTarjeta}")]
+        [Route("api/Cuentas/{id}")]
         [HttpGet]
-        public HttpResponseMessage Get(string numeroTarjeta)
+        public HttpResponseMessage Get(int id)
         {
             try
             {
                 var filePath = @"C:\Users\Brandon\Desktop\Tec-Bank\Web API\Web API\DataBase\Cards.json";
                 var jsonData = File.ReadAllText(filePath);
-                var cardList = JsonConvert.DeserializeObject<List<TarjetaCredito>>(jsonData) ?? new List<TarjetaCredito>();
-                TarjetaCredito item = cardList.Find(o => o.numeroTarjeta == numeroTarjeta);
+                var cuentasList = JsonConvert.DeserializeObject<List<Cuentas>>(jsonData) ?? new List<Cuentas>();
+                Cuentas item = cuentasList.Find(o => o.id == id);
                 return Request.CreateResponse(HttpStatusCode.OK, item);
             }
             catch
@@ -37,54 +36,54 @@ namespace Web_API.Controllers
                 return Request.CreateResponse(HttpStatusCode.InternalServerError);
             }
         }
-        public string Post(TarjetaCredito card)
+        public string Post(Cuentas cliente)
         {
             try
             {
                 var filePath = @"C:\Users\Brandon\Desktop\Tec-Bank\Web API\Web API\DataBase\Cards.json";
                 var jsonData = File.ReadAllText(filePath);
-                var cardList = JsonConvert.DeserializeObject<List<TarjetaCredito>>(jsonData) ?? new List<TarjetaCredito>();
-                cardList.Add(new TarjetaCredito()
+                var cuentasList = JsonConvert.DeserializeObject<List<Cuentas>>(jsonData) ?? new List<Cuentas>();
+                cuentasList.Add(new Cuentas()
                 {
-                    nombre = card.nombre,
-                    numeroTarjeta = card.numeroTarjeta,
-                    tipoTarjeta = card.tipoTarjeta,
-                    fecha = card.fecha,
-                    cvv = card.cvv,
-                    montoDisponible = card.montoDisponible
+                    numeroCuenta = cliente.numeroCuenta,
+                    descripcionCuenta = cliente.descripcionCuenta,
+                    cliente = cliente.cliente,
+                    tipoCuenta = cliente.tipoCuenta,
+                    montoDisponible = cliente.montoDisponible,
+                    moneda = cliente.moneda
                 });
-
-                jsonData = JsonConvert.SerializeObject(cardList);
+                jsonData = JsonConvert.SerializeObject(cuentasList);
                 File.WriteAllText(filePath, jsonData);
                 return "Added succesfully!!!";
             }
-            catch (Exception)
+            catch
             {
                 return "Something went wrong...";
             }
         }
 
-        [Route("api/Cards/{numeroTarjeta}")]
+        [Route("api/Cuentas/{id}")]
         [HttpPut]
-        public string Put(TarjetaCredito card)
+        public string Put(Cuentas cuenta)
         {
             try
             {
                 var filePath = @"C:\Users\Brandon\Desktop\Tec-Bank\Web API\Web API\DataBase\Cards.json";
                 var jsonData = File.ReadAllText(filePath);
-                var cardList = JsonConvert.DeserializeObject<List<TarjetaCredito>>(jsonData) ?? new List<TarjetaCredito>();
-                foreach (TarjetaCredito item in cardList)
+                var cuentasList = JsonConvert.DeserializeObject<List<Cuentas>>(jsonData) ?? new List<Cuentas>();
+                foreach (Cuentas item in cuentasList)
                 {
-                    if(item.numeroTarjeta == card.numeroTarjeta)
+                    if (item.id == cuenta.id)
                     {
-                        item.nombre = card.nombre;
-                        item.tipoTarjeta = card.tipoTarjeta;
-                        item.fecha = card.fecha;
-                        item.cvv = card.cvv;
-                        item.montoDisponible = card.montoDisponible;
+                        item.numeroCuenta = cuenta.numeroCuenta;
+                        item.descripcionCuenta = cuenta.descripcionCuenta;
+                        item.cliente = cuenta.cliente;
+                        item.tipoCuenta = cuenta.tipoCuenta;
+                        item.montoDisponible = cuenta.montoDisponible;
+                        item.moneda = cuenta.moneda;
                     }
                 }
-                jsonData = JsonConvert.SerializeObject(cardList);
+                jsonData = JsonConvert.SerializeObject(cuentasList);
                 File.WriteAllText(filePath, jsonData);
                 return "Updated success!!!";
             }

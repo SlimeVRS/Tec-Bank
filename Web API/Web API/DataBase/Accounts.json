@@ -1,31 +1,20 @@
 [
 	{
-		"accountNumber": "accountNumber1",
-		"accountDescription":
-		"accountDescription1",
-		"accountCurrency": "accountCurrency1",
-		"accountType": "accountType1",
-		"accountOwner": "accountOwner1"
+		"id": 3,
+		"numeroCuenta": "numeroCuenta",
+		"descripcionCuenta": "descripcionCuenta",
+		"cliente": "cliente",
+		"tipoCuenta": "tipoCuenta",
+		"montoDisponible": "montoDisponible",
+		"moneda": "moneda"
 	},
 	{
-		"accountNumber": "accountNumber2", 
-		"accountDescription": "accountDescription2", 
-		"accountCurrency": "accountCurrency2", 
-		"accountType": "accountType2", "accountOwner": "accountOwner2"
-	},
-	{
-		"accountNumber": "accountNumber3",
-		"accountDescription": "accountDescription3",
-		"accountCurrency": "accountCurrency3", "accountType": "accountType3",
-		"accountOwner": "accountOwner3"}, {"accountNumber": "accountNumber4",
-		"accountDescription": "accountDescription4", "accountCurrency": "accountCurrency4",
-		"accountType": "accountType4", "accountOwner": "accountOwner4"
-		},
-	{
-		"accountNumber": "accountNumber5",
-		"accountDescription": "accountDescription5",
-		"accountCurrency": "accountCurrency5",
-		"accountType": "accountType5",
-		"accountOwner": "accountOwner"
+		"id": 4,
+		"numeroCuenta": "numeroCuenta2",
+		"descripcionCuenta": "descripcionCuenta2",
+		"cliente": "cliente2",
+		"tipoCuenta": "tipoCuenta2",
+		"montoDisponible": "montoDisponible2",
+		"moneda": "moneda2"
 	}
 ]

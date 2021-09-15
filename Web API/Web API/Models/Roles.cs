@@ -5,9 +5,9 @@ using System.Web;
 
 namespace Web_API.Models
 {
-    public class Role
+    public class Roles
     {
-        public String roleName { get; set; }
-        public String roleDescription { get; set; }
+        public String nombre { get; set; }
+        public String descripcion { get; set; }
     }
 }
