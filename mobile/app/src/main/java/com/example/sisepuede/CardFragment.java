@@ -46,27 +46,32 @@ public class CardFragment extends Fragment {
                 if (card.isEmpty()){
                     Snackbar.make(view, "Debe ingresar la tarjeta ", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
+                    return;
 
                 }
                 if(card.equals("123")){
                     if(cant.isEmpty()){
                         Snackbar.make(view, "Debe ingresar el monto a pagar", Snackbar.LENGTH_LONG)
                                 .setAction("Action", null).show();
+                        return;
 
                     }
                     else {
                         Snackbar.make(view, "Se realizo el pago de: "+cant+
                                 "\n a la tarjeta: "+card, Snackbar.LENGTH_LONG)
                                 .setAction("Action", null).show();
+                        return;
                     }
                 }
                 if(card.equals("456")){
-                        Snackbar.make(view, "Esta tarjeta es de Debito", Snackbar.LENGTH_LONG)
+                        Snackbar.make(view, "Esta tarjeta no tiene pagos pendientes", Snackbar.LENGTH_LONG)
                                 .setAction("Action", null).show();
+                    return;
                 }
                 else{
                     Snackbar.make(view, "No se encontro la tarjeta", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
+                    return;
 
                 }
 
@@ -84,6 +89,7 @@ public class CardFragment extends Fragment {
             public void onClick(View view) {
                 NavHostFragment.findNavController(CardFragment.this).
                         navigate(R.id.action_cardFragment_to_logginFragment);
+                return;
             }
         });
         binding.loanBtn.setOnClickListener(new View.OnClickListener() {
@@ -91,6 +97,7 @@ public class CardFragment extends Fragment {
             public void onClick(View view) {
                 NavHostFragment.findNavController(CardFragment.this).
                         navigate(R.id.action_cardFragment_to_loanFragment);
+                return;
             }
         });
         binding.buyListBtn.setOnClickListener(new View.OnClickListener() {
@@ -100,6 +107,7 @@ public class CardFragment extends Fragment {
                 if(tarjeta.getText().toString().isEmpty()){
                     Snackbar.make(view, "Ingrese un numero de tarjeta", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
+                    return;
                 }
                 else{
                     if(tarjeta.getText().toString().equals("123") || tarjeta.getText().toString().equals("987")){
@@ -110,6 +118,7 @@ public class CardFragment extends Fragment {
                     else{
                         Snackbar.make(view, "Esta tarjeta no tiene movimientos", Snackbar.LENGTH_LONG)
                                 .setAction("Action", null).show();
+                        return;
                     }
                 }
 

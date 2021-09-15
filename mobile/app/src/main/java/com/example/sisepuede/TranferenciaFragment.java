@@ -44,15 +44,18 @@ public class TranferenciaFragment extends Fragment {
                 if(acc.isEmpty()){
                     Snackbar.make(view, "Ingrese un numero de cuenta a la que desea depositar", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
+                    return;
                 }
                 if(cantidad.isEmpty()){
                     Snackbar.make(view, "Ingrese la cantidad que desea depositar", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
+                    return;
                 }
                 else{
 
                     Snackbar.make(view, "Se realizo el pago a de: "+ cantidad+ "\na la cuenta "+acc, Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
+                    return;
                 }
 
             }

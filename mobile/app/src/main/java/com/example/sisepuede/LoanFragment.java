@@ -34,39 +34,46 @@ public class LoanFragment extends Fragment {
 
         binding.ordBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {                EditText prestamo=(EditText) getActivity().findViewById(R.id.loan_number_text);
+            public void onClick(View view) {
+                EditText prestamo=(EditText) getActivity().findViewById(R.id.loan_number_text);
                 EditText cantidad=(EditText) getActivity().findViewById(R.id.pay_amount_text);
                 loan=prestamo.getText().toString();
                 cant=cantidad.getText().toString();
                 if (loan.equals("") ){
                     Snackbar.make(view, "Debe ingresar la cuenta ", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
+                    return;
 
                 }
                 if(loan.equals("456")){
                     if(cant.isEmpty()){
                         Snackbar.make(view, "Debe ingresar el monto", Snackbar.LENGTH_LONG)
                                 .setAction("Action", null).show();
+                        return;
                     }
                     else {
                         Snackbar.make(view, "Esta cuenta esta al dia", Snackbar.LENGTH_LONG)
                                 .setAction("Action", null).show();
+                        return;
                     }
                 }
                 if(loan.equals("123")){
                     if(cant.isEmpty()){
                         Snackbar.make(view, "Debe ingresar el monto", Snackbar.LENGTH_LONG)
                                 .setAction("Action", null).show();
+                        return;
                     }
                     else{
                         Snackbar.make(view, "Se realizó el pago ordinario de: "+cant+
                                 "\n A la cuenta: "+loan, Snackbar.LENGTH_LONG)
                                 .setAction("Action", null).show();
+                        return;
                     }
                 }
                 if(!(loan.equals("123") || loan.equals("456"))){
                     Snackbar.make(view, "La cuenta no existe ", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
+                    return;
                 }
 
             }

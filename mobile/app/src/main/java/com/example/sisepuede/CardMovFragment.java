@@ -57,15 +57,22 @@ public class CardMovFragment extends Fragment {
                 System.out.println(cardNum);
                 if (cardNum.equals("123")){
                     card_1();
+                    adapter=new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1,datos);
+                    list.setAdapter(adapter);
+                    return;
+
                 }
                 if (cardNum.equals("987")){
-                    card_2();
+                    card_2();adapter=new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1,datos);
+                    list.setAdapter(adapter);
+                    return;
+
                 }
                 else{
                     addText("No hay movimientos");
+
                 }
-                adapter=new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1,datos);
-                list.setAdapter(adapter);
+
             }
         });
 
@@ -82,17 +89,20 @@ public class CardMovFragment extends Fragment {
                 .setText("hello");
         return convertView;
     }
+    //Funcion que carga los datos de la tarjeta 1
     private void card_1(){
         addText("Pago Carro -150000");
         addText("Pago Agua  -10000");
         addText("walmart    -100000");
         addText("SINPE      +30000");
     }
+    //Funcion que carga los datos de la tarjeta 2
     private void card_2(){
         addText("Telecable  -35000");
         addText("Claro      -12000");
         addText("SINPE      +30000");
     }
+    //Funcion que agrega datos al array que se mostrara en pantalla
     private void addText(String text){
         datos.add(text);
     }

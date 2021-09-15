@@ -63,6 +63,7 @@ public class LogginFragment extends Fragment {
 
         });
     }
+    // Funcion que revisa que los datos del EditText concuerden con los datos para el inicio de sesion
     private boolean iniciarSesion(){
         //obtención de los datos del usuario
         EditText user = (EditText) getActivity().findViewById(R.id.user_text);
@@ -76,7 +77,7 @@ public class LogginFragment extends Fragment {
             return false;
         }
     }
-
+    //Funcion que obtiene los datos del edit text y los guarda en un diccionario del Fragment manager para poder utilizarlo en otro fragmento
     private void send(){
         //Envio del usuario al fragmento de cuentas
         Bundle bundle= new Bundle();

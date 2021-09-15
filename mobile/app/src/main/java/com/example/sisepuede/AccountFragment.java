@@ -47,21 +47,25 @@ public class AccountFragment extends Fragment {
                 if (cuenta.getText().toString().isEmpty()) {
                     Snackbar.make(view, "Ingrese un numero de cuenta", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
+                    return;
                 }
 
                 if (cuenta.getText().toString().equals("123") ) {
                     NavHostFragment.findNavController(AccountFragment.this)
                             .navigate(R.id.action_AccFragment_to_AccMovFragment);
+                    return;
 
                 }
                 if (cuenta.getText().toString().equals("135") ) {
                     Snackbar.make(view, "Esta cuenta no posee movimientos", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
+                    return;
 
                 }
                 else {
                     Snackbar.make(view, "No se encontro esta cuenta", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
+                    return;
                 }
             }
         });
@@ -74,11 +78,13 @@ public class AccountFragment extends Fragment {
                 if (cuenta.getText().toString().equals("123") || cuenta.getText().toString().equals("135") ){
                     NavHostFragment.findNavController(AccountFragment.this)
                             .navigate(R.id.action_AccFragment_to_TransferFragment);
+                    return;
 
                 }
                 else{
                     Snackbar.make(view, "No se encontro esta cuenta", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
+                    return;
                 }
             }
         });
@@ -87,6 +93,7 @@ public class AccountFragment extends Fragment {
             public void onClick(View view) {
                 NavHostFragment.findNavController(AccountFragment.this)
                         .navigate(R.id.action_AccFragment_to_logginFragment);
+                return;
             }
         });
         binding.cardBtn.setOnClickListener(new View.OnClickListener() {
@@ -94,6 +101,7 @@ public class AccountFragment extends Fragment {
             public void onClick(View view) {
                 NavHostFragment.findNavController(AccountFragment.this)
                         .navigate(R.id.action_AccFragment_to_cardFragment);
+                return;
             }
         });
         binding.loanBtn.setOnClickListener(new View.OnClickListener() {
@@ -101,6 +109,7 @@ public class AccountFragment extends Fragment {
             public void onClick(View view) {
                 NavHostFragment.findNavController(AccountFragment.this)
                         .navigate(R.id.action_AccFragment_to_loanFragment);
+                return;
             }
         });
 
