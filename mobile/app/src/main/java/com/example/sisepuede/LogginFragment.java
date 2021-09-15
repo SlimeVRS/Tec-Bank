@@ -42,17 +42,21 @@ public class LogginFragment extends Fragment {
                 usuario= user.getText().toString();
                 pass=password.getText().toString();
                 if(usuario.isEmpty() ||pass.isEmpty()){
+
                     Snackbar.make(view, "Debe ingresar un usuario y la contraseña ", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
+                    return;
                 }
                 if(iniciarSesion()){
                     send();
                     NavHostFragment.findNavController(LogginFragment.this)
                             .navigate(R.id.action_FirstFragment_to_AccFragment);
+                    return;
                 }
                 if (!iniciarSesion()){
                     Snackbar.make(view, "Usuario o contraseña incorrecta ", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
+                    return;
                 }
 
             }
