@@ -7,38 +7,46 @@
   </head>
   <body class="text-center">
 
-    <main class="form-signin">
+    <main class="form-signin"><!--Se usa la clase form para ingresar-->
       <form>
-        <h1 class="h3 mb-3 fw-normal">Pago de Préstamos</h1>
+        <h1 class="h3 mb-3 fw-normal">Pago de Préstamos</h1><!--Este es un label para el título de la vista-->
 
-
-        <a>Datos personales</a>
+        <a>Datos personales</a><!--Una etiqueta para facilidad del cliente-->
         <label for="inputName" class="visually-hidden">Nombre</label>
+        <!--Se pone un placeholder que recibe el nombre del usuario-->
         <input id="inputName" class="form-control" placeholder="Nombre" required #nombreInput>
 
         <label for="inputLastName" class="visually-hidden">Primer apellido</label>
+        <!--Se pone un placeholder que recibe el primer apellido-->
         <input id="inputLastName" class="form-control" placeholder="Primer apellido" required #apellidounoInput>
 
         <label for="inputSLastName" class="visually-hidden">Segundo apellido</label>
+        <!--Se pone un placeholder que recibe el segundo apellido-->
         <input id="inputSLastName" class="form-control" placeholder="Segundo apellido" required #apellido2Input>
 
         <label for="inputName" class="visually-hidden">Monto</label>
+        <!--Se pone un placeholder que recibe el el monto-->
         <input id="inputName" class="form-control" placeholder="Monto a pagar" required #Pago_prestamoInput>
 
         <label for="inputName" class="visually-hidden">Tipo_pago</label>
+        <!--Se pone un placeholder que recibe el tipo de pago-->
         <input id="inputName" class="form-control" placeholder="Tipo pago(ordinario o extraordinario)" required #typepagoInput>
 
 
         <label for="inputContinet" class="visually-hidden">Numero_Prestamo</label>
+        <!--Se pone un placeholder que recibe número de préstamo-->
         <input id="inputContinet" class="form-control" placeholder="Número de préstamo" required #numeroprestamoInput>
 
-        <a>Información de cuenta</a>
+        <a>Información de cuenta</a><!--Una etiqueta para facilidad del cliente-->
 
         <label for="inputEmail" class="visually-hidden">Cedula</label>
+        <!--Se pone un placeholder que recibe la cédula-->
         <input id="inputEmail" class="form-control" placeholder="Cédula" required autofocus #CédulaInput>
 
         <label for="inputPassword" class="visually-hidden">Password</label>
+        <!--Se pone un placeholder que recibe la contraseña-->
         <input type="password" id="inputPassword" class="form-control" placeholder="Password" required #passwordInput>
+
         <!--Upload data to loging with this button -->
         <button class="w-100 btn btn-lg btn-warn" type="submit" href="welcome!">Pagar</button>
       </form>

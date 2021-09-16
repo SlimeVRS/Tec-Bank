@@ -1,6 +1,20 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!--
+        Este es el inicio de navbar, 
+        se utiliza bootstrap, para definir el estilo de la aplicación web
+    -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light"><!--Ulitizando css se define el estilo del navbar-->
+    <!--
+        La clase .container-fluid proporciona un contenedor de ancho completo,
+        que abarca todo el ancho de la ventana gráfica
+    -->
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">TEC BANK</a>
+        <a class="navbar-brand" href="#">TEC BANK</a><!-- Se pone un título al navbar y queda como marca-->
+        <!--
+            collapse es la clase de navbar, 
+            es como una barra de navegación,
+            que es sensible al tamaño de la ventana
+            es decir, hace a la aplicación responsive
+        -->
         <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
@@ -8,13 +22,30 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="#">Home</a> <!--Al tocar este link la aplicación vuelve al inicio-->
                 </li>
+                <!--
+                    se pone una especie de botón, 
+                    que luego despliega el manú
+                -->
                 <li class="nav-item dropdown" ngbDropdown>
                     <a class="nav-link dropdown-toggle" id="navbarScrollingDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false" ngbDropdownToggle>
-                        Opciones Admin
+                        Opciones Admin <!--este el nombre del drop antes de ser desplegado, es decir sin presionar-->
                     </a>
+                    <!--
+                        se define a ngbDropdown
+                        despegla enlaces, con opciones para ir a diferentes ventanas
+                        las opciones son:
+                            Login
+                            gestión de tarjetas
+                            gestión de cuentas
+                            gestión de roles
+                            gestión de clientes
+                        este es el menú
+                        Además se definen las rutas a seguir
+                        al hecer clic el link
+                    -->
                     <ul class="dropdown-menu" ngbDropdownMenu aria-labelledby="navbarScrollingDropdown">
                         <li ngbDropdownItem><a class="dropdown-item" routerLink="/login">Login</a></li>
                         <li ngbDropdownItem><a class="dropdown-item" routerLink="/tarjetas">Gestion de Tarjetas</a></li>
@@ -23,13 +54,28 @@
                         <li ngbDropdownItem><a class="dropdown-item" routerLink="/clientes">Gestion de Clientes</a></li>
                     </ul>
                 </li>
-
-
+                <!--
+                    se pone una especie de botón, 
+                    que luego despliega el manú
+                -->
                 <li class="nav-item dropdown" ngbDropdown>
                     <a class="nav-link dropdown-toggle" id="navbarScrollingDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false" ngbDropdownToggle>
-                        Opciones Client
+                        Opciones Client <!--este el nombre del drop antes de ser desplegado, es decir sin presionar-->
                     </a>
+                    <!--
+                        se define a ngbDropdown
+                        despegla enlaces, con opciones para ir a diferentes ventanas
+                        las opciones son:
+                            Login
+                            Pago entre cuentas
+                            Moviemientos
+                            Tarjetas asociadas
+                            Prestamos
+                        este es el menú
+                        Además se definen las rutas a seguir
+                        al hecer clic el link
+                    -->
                     <ul class="dropdown-menu" ngbDropdownMenu aria-labelledby="navbarScrollingDropdown">
                         <li ngbDropdownItem><a class="dropdown-item" routerLink="/login">Login</a></li>
                         <li ngbDropdownItem><a class="dropdown-item" routerLink="/register">Pago entre cuentas</a></li>

@@ -7,39 +7,47 @@
   </head>
   <body class="text-center">
 
-    <main class="form-signin">
+    <main class="form-signin"><!--Se utiliza un form para recibir la información-->
       <form>
-        <h1 class="h3 mb-3 fw-normal">Pago entre cuentas</h1>
-
+        <h1 class="h3 mb-3 fw-normal">Pago entre cuentas</h1><!--Se difine un formato con CSS y el título principal de la vista-->
 
         <a>Cuenta de la cual sustraer dinero</a>
         <label for="inputName" class="visually-hidden">Numero_cuanta</label>
+        <!--se usa un placeholder para recibir el numero de cuenta-->
         <input id="inputName" class="form-control" placeholder="Número decuanta" required #Numero_cuantaInput>
 
         <label for="inputLastName" class="visually-hidden">Numero_tarjeta</label>
+        <!--se usa un placeholder para recibir numero de tarjerta-->
         <input id="inputLastName" class="form-control" placeholder="Número tarjeta" required #Numero_tarjetaInput>
 
         <label for="inputSLastName" class="visually-hidden">Descripcion</label>
+        <!--se usa un placeholder para recibir la descripción-->
         <input id="inputSLastName" class="form-control" placeholder="Descripción del envío" required #DescripcionInput>
 
         <label for="inputSLastName" class="visually-hidden">Monto_enviar</label>
+        <!--se usa un placeholder para recibir el monto a anviar-->
         <input id="inputSLastName" class="form-control" placeholder="Monto a envair" required #Monto_enviarInput>
 
         <a>A quien desea enviar el deposito</a>
         <label for="inputDireccion" class="visually-hidden">Nombre_completo</label>
+        <!--se usa un placeholder para recibir el nombre completo de a quien va el depósito destindo-->
         <input id="inputDireccion" class="form-control" placeholder="Nombre Completo" required #Nombre_completoInput>
 
         <label for="inputName" class="visually-hidden">Numero_cedula</label>
+        <!--se usa un placeholder para recibir el numero de decula-->
         <input id="inputName" class="form-control" placeholder="Número de Cédula" required #Numero_cedulaInput>
 
         <label for="inputName" class="visually-hidden">Cuenta_deposito</label>
+        <!--se usa un placeholder para recibir la cuenta que recibe el depósito-->
         <input id="inputName" class="form-control" placeholder="Cuenta para realizar el depósito" required #Cuenta_depositoInput>
 
         <a>Verificación</a>
         <label for="inputPassword" class="visually-hidden">Pin</label>
+        <!--se usa un placeholder para recibir el pin de la tarjeta-->
         <input type="password" id="inputPassword" class="form-control" placeholder="Pin" required #pinInput>
 
         <label for="inputPassword" class="visually-hidden">Password</label>
+        <!--se usa un placeholder para recibir la contraseña de confrimación-->
         <input type="password" id="inputPassword" class="form-control" placeholder="Password" required #passwordInput>
         <!--Upload data to loging with this button -->
         <button class="w-100 btn btn-lg btn-warn" type="submit" href="welcome!">Pagar</button>
