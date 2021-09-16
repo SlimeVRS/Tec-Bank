@@ -5,12 +5,15 @@ import { ToastrService } from 'ngx-toastr';
 import { TarjetaCredito } from '../models/tarjetaCredito';
 import { TarjetaService } from '../services/tarjeta.service';
 
+//El componente tarjetas es el encargado de manejar
+//formularios guardarTarjetas, editarTarjetas y borrar
 
 @Component({
   selector: 'app-tarjetas',
   templateUrl: './tarjetas.component.html',
   styleUrls: ['./tarjetas.component.css']
 })
+//constructor del objecto tarjetas
 export class TarjetasComponent implements OnInit {
   form: FormGroup;
   list: TarjetaCredito[];
@@ -44,6 +47,7 @@ export class TarjetasComponent implements OnInit {
       })
     })
   }
+  //metodo encargado de guardar los datos del form de vista tarjetas
   guardarTarjeta() {
     const tarjeta: TarjetaCredito = {
     
@@ -64,6 +68,7 @@ export class TarjetasComponent implements OnInit {
     console.log(this.form);
     console.log(tarjeta);
   }
+  //Metodo encargardo de editar las tarjetas segun el numero de tarjeta
   editar(){
     const tarjeta: TarjetaCredito = {
       
