@@ -28,9 +28,9 @@ export class TarjetaService {
   actualizar(tarjeta){
     this.actualizarForm.next(tarjeta);
   }
-  // actualizarTarjeta(id: number, tarjeta: TarjetaCredito): Observable<TarjetaCredito>{
-  //   return this.http.put<TarjetaCredito>
-  // }
+   actualizarTarjeta(id:string , tarjeta: TarjetaCredito): Observable<TarjetaCredito>{
+     return this.http.put<TarjetaCredito>('http://localhost:50394/api/TarjetaCredito/'+id,tarjeta);
+   }
   obtenerTarjeta(): Observable<TarjetaCredito>{
     return this.actualizarForm.asObservable();
   }

@@ -1,18 +1,1 @@
-[
-  {
-    "nombre": "nombre",
-    "numeroTarjeta": "numeroTarjeta",
-    "tipoTarjeta": "tipoTarjeta",
-    "fecha": "fecha",
-    "cvv": "cvv",
-    "montoDisponible": "montoDisponible"
-  },
-  {
-    "nombre": "nombre2",
-    "numeroTarjeta": "numeroTarjeta2",
-    "tipoTarjeta": "tipoTarjeta2",
-    "fecha": "fecha2",
-    "cvv": "cvv2",
-    "montoDisponible": "montoDisponible2"
-  }
-]
+[{"nombre":"BRAndon","numeroTarjeta":"1841561561515646","tipoTarjeta":"tMastera","fecha":"11/09","cvv":"132","montoDisponible":"215615656"},{"nombre":"MARCOTulio","numeroTarjeta":"1841561561515643","tipoTarjeta":"tipoTarjeta","fecha":"11/09","cvv":"cvv","montoDisponible":"montoDisponible"}]

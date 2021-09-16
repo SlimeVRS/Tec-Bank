@@ -15,7 +15,7 @@ namespace Web_API.Controllers
         public HttpResponseMessage Get()
         {
             Console.WriteLine("This is a get response");
-            var filePath = @"F:\Progras\Tec-Bank\Web API\Web API\DataBase\Cards.json";
+            var filePath = @"C:\Users\Brandon\Desktop\Tec-Bank\DataBase\Cards.json";
             var response = JsonConvert.DeserializeObject(File.ReadAllText(filePath));
             return Request.CreateResponse(HttpStatusCode.OK, response);
         }
@@ -26,7 +26,7 @@ namespace Web_API.Controllers
         {
             try
             {
-                var filePath = @"F:\Progras\Tec-Bank\Web API\Web API\DataBase\Cards.json";
+                var filePath = @"C:\Users\Brandon\Desktop\Tec-Bank\DataBase\Cards.json";
                 var jsonData = File.ReadAllText(filePath);
                 var cardList = JsonConvert.DeserializeObject<List<TarjetaCredito>>(jsonData) ?? new List<TarjetaCredito>();
                 TarjetaCredito item = cardList.Find(o => o.numeroTarjeta == numeroTarjeta);
@@ -41,7 +41,7 @@ namespace Web_API.Controllers
         {
             try
             {
-                var filePath = @"F:\Progras\Tec-Bank\Web API\Web API\DataBase\Cards.json";
+                var filePath = @"C:\Users\Brandon\Desktop\Tec-Bank\DataBase\Cards.json";
                 var jsonData = File.ReadAllText(filePath);
                 var cardList = JsonConvert.DeserializeObject<List<TarjetaCredito>>(jsonData) ?? new List<TarjetaCredito>();
                 cardList.Add(new TarjetaCredito()
@@ -70,7 +70,7 @@ namespace Web_API.Controllers
         {
             try
             {
-                var filePath = @"F:\Progras\Tec-Bank\Web API\Web API\DataBase\Cards.json";
+                var filePath = @"C:\Users\Brandon\Desktop\Tec-Bank\DataBase\Cards.json";
                 var jsonData = File.ReadAllText(filePath);
                 var cardList = JsonConvert.DeserializeObject<List<TarjetaCredito>>(jsonData) ?? new List<TarjetaCredito>();
                 foreach (TarjetaCredito item in cardList)

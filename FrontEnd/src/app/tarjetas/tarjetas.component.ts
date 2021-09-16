@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+
 import { ToastrService } from 'ngx-toastr';
 import { TarjetaCredito } from '../models/tarjetaCredito';
 import { TarjetaService } from '../services/tarjeta.service';
@@ -14,7 +15,7 @@ export class TarjetasComponent implements OnInit {
   form: FormGroup;
   list: TarjetaCredito[];
   tarjeta: TarjetaCredito;
-  idTarjeta: 0;
+  idTarjeta: string;
   
 
   constructor(private formBuilder: FormBuilder, private tarjetaService: TarjetaService, private toastr: ToastrService) {
@@ -45,7 +46,7 @@ export class TarjetasComponent implements OnInit {
   }
   guardarTarjeta() {
     const tarjeta: TarjetaCredito = {
-      id:this.idTarjeta,
+    
       nombre: this.form.get('nombre').value,
       numeroTarjeta: this.form.get('numeroTarjeta').value,
       tipoTarjeta:this.form.get('tipoTarjeta').value,
@@ -62,6 +63,24 @@ export class TarjetasComponent implements OnInit {
    
     console.log(this.form);
     console.log(tarjeta);
+  }
+  editar(){
+    const tarjeta: TarjetaCredito = {
+      
+      nombre: this.form.get('nombre').value,
+      numeroTarjeta: this.form.get('numeroTarjeta').value,
+      tipoTarjeta:this.form.get('tipoTarjeta').value,
+      fecha: this.form.get('fecha').value,
+      montoDisponible: this.form.get('montoDisponible').value,
+      cvv:this.form.get('cvv').value,
+      
+    }
+    this.idTarjeta+1;
+    this.tarjetaService.actualizarTarjeta(this.idTarjeta,tarjeta).subscribe(data=>{
+    this.toastr.info('Actualizada', 'Exitosamente');
+    this.tarjetaService.obtenerTarjetas();
+    this.form.reset(); 
+    });
     
   }
   
