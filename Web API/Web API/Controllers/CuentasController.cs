@@ -26,7 +26,7 @@ namespace Web_API.Controllers
          */
         public HttpResponseMessage Get()
         {
-            var filePath = @"C:\Users\Brandon\Desktop\Tec-Bank\DataBase\Cards.json";
+            var filePath = @"C:\Users\Brandon\Desktop\Tec-Bank\DataBase\Accounts.json";
             var response = JsonConvert.DeserializeObject(File.ReadAllText(filePath));
             return Request.CreateResponse(HttpStatusCode.OK, response);
         }
@@ -42,7 +42,7 @@ namespace Web_API.Controllers
             try
             {
                 /// Directorio en donde se encuentra la base de datos
-                var filePath = @"F:\Progras\Tec-Bank\Web API\Web API\DataBase\Accounts.json";
+                var filePath = @"C:\Users\Brandon\Desktop\Tec-Bank\DataBase\Accounts.json";
 
                 /// Se guarda el contenido como un string
                 var jsonData = File.ReadAllText(filePath);
@@ -72,7 +72,7 @@ namespace Web_API.Controllers
             try
             {
                 /// Directorio en donde se encuentra la base de datos
-                var filePath = @"F:\Progras\Tec-Bank\Web API\Web API\DataBase\Accounts.json";
+                var filePath = @"C:\Users\Brandon\Desktop\Tec-Bank\DataBase\Accounts.json";
 
                 /// Se guarda el contenido como un string
                 var jsonData = File.ReadAllText(filePath);
@@ -114,7 +114,7 @@ namespace Web_API.Controllers
             try
             {
                 /// Directorio en donde se encuentra la base de datos
-                var filePath = @"F:\Progras\Tec-Bank\Web API\Web API\DataBase\Accounts.json";
+                var filePath = @"C:\Users\Brandon\Desktop\Tec-Bank\DataBase\Accounts.json";
 
                 /// Se guarda el contenido como un string
                 var jsonData = File.ReadAllText(filePath);

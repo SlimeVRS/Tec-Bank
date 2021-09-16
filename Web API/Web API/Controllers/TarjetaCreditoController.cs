@@ -10,20 +10,22 @@ using Web_API.Models;
 
 namespace Web_API.Controllers
 {
-    /**
-     * En esta clase se encuentran todos los metodos que se pueden hacer desde el controlador de Tarjetas
-     * Esto incluye:
-     * - Get genera
-     * - Get individual
-     * - Post
-     * - Put
-     */
+    /**
+
+    * En esta clase se encuentran todos los metodos que se pueden hacer desde el controlador de Tarjetas
+    * Esto incluye:
+    * - Get genera
+    * - Get individual
+    * - Post
+    * - Put
+
+    */
     public class TarjetaCreditoController : ApiController
     {
-        /**
-         *El metodo get devuelte todas las tarjetas
-         <returns>Respuesta del api en formato json de todo el contenido
-         */
+        /**
+        *El metodo get devuelte todas las tarjetas
+        <returns>Respuesta del api en formato json de todo el contenido
+        */
         public HttpResponseMessage Get()
         {
             Console.WriteLine("This is a get response");
@@ -32,10 +34,10 @@ namespace Web_API.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, response);
         }
 
-        /**
-         * El metodo get individual devuelve un solo item segun el numero de tarjeta
-         * <returns>Respuesta del api en formato json de un solo item
-         */
+        /**
+        * El metodo get individual devuelve un solo item segun el numero de tarjeta
+        * <returns>Respuesta del api en formato json de un solo item
+        */
         [Route("api/TarjetaCredito/{numeroTarjeta}")]
         [HttpGet]
         public HttpResponseMessage Get(string numeroTarjeta)
@@ -61,10 +63,10 @@ namespace Web_API.Controllers
             }
         }
 
-        /**
-         * El metodo post agrega una nueva tarjeta
-         * <returns> Un string de confirmacion
-         */
+        /**
+        * El metodo post agrega una nueva tarjeta
+        * <returns> Un string de confirmacion
+        */
         public string Post(TarjetaCredito card)
         {
             try
@@ -98,10 +100,10 @@ namespace Web_API.Controllers
             }
         }
 
-        /**
-         * El metodo put actualiza una tarjeta
-         * <returns> Un string de confirmacion
-         */
+        /**
+        * El metodo put actualiza una tarjeta
+        * <returns> Un string de confirmacion
+        */
         [Route("api/TarjetaCredito/{numeroTarjeta}")]
         [HttpPut]
         public string Put(TarjetaCredito card)
