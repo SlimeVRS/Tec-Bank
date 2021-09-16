@@ -19,6 +19,10 @@ import { HttpClientModule} from '@angular/common/http';
 import { ListarolesComponent } from './listaroles/listaroles.component';
 import { MoraComponent } from './mora/mora.component';
 import { ListacuentasComponent } from './listacuentas/listacuentas.component';
+import { RegistrarComponent } from './registrar/registrar.component';
+import { MovimientosComponent } from './movimientos/movimientos.component';
+import { TarjetaClienteComponent } from './tarjeta-cliente/tarjeta-cliente.component';
+import { PrestamosComponent } from './prestamos/prestamos.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +37,11 @@ import { ListacuentasComponent } from './listacuentas/listacuentas.component';
     ListaTarjetasComponent,
     ListarolesComponent,
     MoraComponent,
-    ListacuentasComponent
+    ListacuentasComponent,
+    RegistrarComponent,
+    MovimientosComponent,
+    TarjetaClienteComponent,
+    PrestamosComponent
     
   ],
   imports: [
@@ -50,6 +58,10 @@ import { ListacuentasComponent } from './listacuentas/listacuentas.component';
       {path: 'roles', component: RolesComponent},
       {path: 'clientes', component: ClientsComponent},
       {path: 'cuentas', component: AccountsComponent},
+      {path: 'register', component: RegistrarComponent},
+      {path: 'movimientos', component: MovimientosComponent},
+      {path: 'tarjetas_cliante', component: TarjetaClienteComponent},
+      {path: 'prestamos', component: PrestamosComponent},
     ]),
     BrowserAnimationsModule
   ],
