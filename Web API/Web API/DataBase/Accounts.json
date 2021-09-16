@@ -1,0 +1,20 @@
+[
+	{
+		"id": 3,
+		"numeroCuenta": "numeroCuenta",
+		"descripcionCuenta": "descripcionCuenta",
+		"cliente": "cliente",
+		"tipoCuenta": "tipoCuenta",
+		"montoDisponible": "montoDisponible",
+		"moneda": "moneda"
+	},
+	{
+		"id": 4,
+		"numeroCuenta": "numeroCuenta2",
+		"descripcionCuenta": "descripcionCuenta2",
+		"cliente": "cliente2",
+		"tipoCuenta": "tipoCuenta2",
+		"montoDisponible": "montoDisponible2",
+		"moneda": "moneda2"
+	}
+]

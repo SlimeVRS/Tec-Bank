@@ -1,0 +1,22 @@
+[
+  {
+    "nombreCliente": "nombreCliente",
+    "cedulaCliente": "cedulaCliente",
+    "direccionCliente": "direccionCliente",
+    "telefonoCliente": "telefonoCliente",
+    "usuarioCliente": "usuarioCliente",
+    "contrasenaCliente": "contrasenaCliente",
+    "ingresoCliente": "ingresoCliente",
+    "tipoCliente": "tipoCliente"
+  },
+  {
+    "nombreCliente": "nombreCliente2",
+    "cedulaCliente": "cedulaCliente2",
+    "direccionCliente": "direccionCliente2",
+    "telefonoCliente": "telefonoCliente2",
+    "usuarioCliente": "usuarioCliente2",
+    "contrasenaCliente": "contrasenaCliente2",
+    "ingresoCliente": "ingresoCliente2",
+    "tipoCliente": "tipoCliente2"
+  }
+]

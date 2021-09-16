@@ -14,7 +14,7 @@ namespace Web_API.Controllers
     {
         public HttpResponseMessage Get()
         {
-            var filePath = @"DataBase\Accounts.json";
+            var filePath = @"F:\Progras\Tec-Bank\Web API\Web API\DataBase\Accounts.json";
             var response = JsonConvert.DeserializeObject(File.ReadAllText(filePath));
             return Request.CreateResponse(HttpStatusCode.OK, response);
         }
@@ -25,7 +25,7 @@ namespace Web_API.Controllers
         {
             try
             {
-                var filePath = @"DataBase\Accounts.json";
+                var filePath = @"F:\Progras\Tec-Bank\Web API\Web API\DataBase\Accounts.json";
                 var jsonData = File.ReadAllText(filePath);
                 var cuentasList = JsonConvert.DeserializeObject<List<Cuentas>>(jsonData) ?? new List<Cuentas>();
                 Cuentas item = cuentasList.Find(o => o.id == id);
@@ -40,7 +40,7 @@ namespace Web_API.Controllers
         {
             try
             {
-                var filePath = @"DataBase\Accounts.json";
+                var filePath = @"F:\Progras\Tec-Bank\Web API\Web API\DataBase\Accounts.json";
                 var jsonData = File.ReadAllText(filePath);
                 var cuentasList = JsonConvert.DeserializeObject<List<Cuentas>>(jsonData) ?? new List<Cuentas>();
                 cuentasList.Add(new Cuentas()
@@ -68,7 +68,7 @@ namespace Web_API.Controllers
         {
             try
             {
-                var filePath = @"DataBase\Accounts.json";
+                var filePath = @"F:\Progras\Tec-Bank\Web API\Web API\DataBase\Accounts.json";
                 var jsonData = File.ReadAllText(filePath);
                 var cuentasList = JsonConvert.DeserializeObject<List<Cuentas>>(jsonData) ?? new List<Cuentas>();
                 foreach (Cuentas item in cuentasList)
